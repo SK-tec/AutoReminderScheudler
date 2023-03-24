@@ -15,4 +15,16 @@ app.use(express.json());
 app.get('/',(req,res)=>{
     res.send("<h1>Welcome</h1>")
 })
+
+if(process.env.NODE_ENV==="production"){
+  const buildPath = path.join(__dirname, "../client/build");
+  app.use(express.static(buildPath));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(buildPath, "index.html"));
+  });
+
+}
+
+
 connectDB().then(()=>{app.listen(PORT,()=>{console.log(`Server is running on Port ${PORT}`)})})
