@@ -1,10 +1,11 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
-     <h1>Welcome to Final Projects</h1>
+     <Footer/>
     </div>
   );
 }
