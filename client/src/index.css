@@ -44,13 +44,14 @@
 
 /************* footer start ***********************/
 
-.container-footer{
-  margin-top: 2rem;
-  box-sizing: border-box;
+.footer{
   background-color: bisque;
-  padding: 1rem 0 1rem 5rem;
-  display: flex;
-  gap: 5rem;
+}
+.footer-col{
+  
+ 
+ 
+  
   text-align: left;
   font-family: 'Poppins', sans-serif;
 }
@@ -67,10 +68,20 @@
 }
 
 .social-icons{
-  display: flex;
-  gap: 1rem;
-  font-size: 1.6rem;
+ 
+  font-size: 2rem;
   cursor: pointer;
 }
-
+.facebook{
+  color: blue;
+}
+.insta{
+  color:crimson
+}
+.twitter{
+  color: rgb(64, 109, 192);
+}
+.linkedin{
+  color: blue;
+}
 /************* footer end ***********************/
