@@ -1,7 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
 import school from "../images/school.jpg";
 import students from "../images/students.png";
-
+import basketball from "../images/basketball.jpg";
 
 const Header = () => {
     return ( 
@@ -33,7 +33,7 @@ const Header = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=Third slide&bg=20232a"
+          src={basketball}
           alt="Third slide"
         />
 
