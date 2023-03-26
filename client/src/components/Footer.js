@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
+
 import logo from "./images/logo.png";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
