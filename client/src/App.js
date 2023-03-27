@@ -9,23 +9,20 @@ import Signin from './components/Signin';
 import { Routes, Route } from "react-router-dom";
 import Notices from './components/Notices';
 
+
 function App() {
   return (
     <div className="App">  
          
      <MyNav />
-     
-      <Routes>
+     <Routes>
         <Route path="/" element={<Header />} />
         {/* <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} /> */}
-      
         <Route path="/admin" element={<RegisterForm />} />
-        
         <Route path="/signin" element={<Signin/>} /> 
       </Routes>
-      <Notices />
-      <Footer />
+     <Footer />
     </div>
   );
 }

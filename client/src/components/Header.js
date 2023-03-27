@@ -3,6 +3,7 @@ import school from "../images/school.jpg";
 import students from "../images/students.png";
 import basketball from "../images/basketball.jpg";
 import Achivements from './Achivements';
+import Notices from './Notices';
 
 const Header = () => {
     return ( 
@@ -43,6 +44,7 @@ const Header = () => {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    <Notices />
     <Achivements/> 
     </> 
     );
