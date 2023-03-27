@@ -14,15 +14,17 @@ function App() {
     <div className="App">  
          
      <MyNav />
+     
       <Routes>
         <Route path="/" element={<Header />} />
         {/* <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} /> */}
-      <Notices />
+      
         <Route path="/admin" element={<RegisterForm />} />
         
         <Route path="/signin" element={<Signin/>} /> 
       </Routes>
+      <Notices />
       <Footer />
     </div>
   );
