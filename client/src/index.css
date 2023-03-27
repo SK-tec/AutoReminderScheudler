@@ -13,11 +13,20 @@
 
 /************* Navbar end ***********************/
 
-#achievements{
-  background-image: cover;
-  
+#achievements img{
+  max-width: 100%;
+  height: 16vw;
+ 
+}
+.card img {
+  border: 2px solid #ffffff;
+  border-radius: 10px;
 }
 
+.card:hover {
+  border-color: rgb(13, 110, 253);
+  transform: scale(1.03);
+}
 /************* achivements end ***********************/
 
 /************* footer start ***********************/
