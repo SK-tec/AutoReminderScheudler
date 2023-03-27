@@ -13,44 +13,9 @@
 
 /************* Navbar end ***********************/
 
-/************* achivements start ***********************/
-.heading-achiev {
-  font-family: "Poppins", sans-serif;
-}
-
-.container-achiev {
-  display: flex;
-  justify-content: space-between;
-  gap: 9rem;
-  padding: 2rem 5rem;
-  background-color: bisque;
-}
-
-.box-img {
-  background-color: bisque;
-  border: 1px solid #000;
-  width: 15rem;
-  height: 15rem;
-}
-
-.box-text {
-  padding-top: 0.5rem;
-  font-family: "Poppins", sans-serif;
-}
-
-@media (max-width: 48rem) {
-  .container-achiev {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .box-img {
-    width: 20rem;
-    height: 20rem;
-  }
+#achievements{
+  background-image: cover;
+  
 }
 
 /************* achivements end ***********************/

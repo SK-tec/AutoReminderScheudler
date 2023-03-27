@@ -11,8 +11,8 @@ function App() {
     <div className="App">
       <MyNav />
       <Header />
-      <Achivements/>
       <RegisterForm/>
+      <Achivements/>
      <Footer/>
     </div>
   );

@@ -1,33 +1,38 @@
+import {Card, Row, } from 'react-bootstrap';
+import Boy from '../images/boy.jpeg';
+import Girl from '../images/girl.jpeg';
+
+
 const Achivements = () => {
     return (
-        <div>
-            <h1 className="heading-achiev">Achivements</h1>
-            <div className="container-achiev">
-                <div className="box-achiev">
-                    <div className="box-img"></div>
-                        <div className="box-text">
-                            <p>Achivement #1</p>
-                        </div>
-                </div>
-                <div className="box-achiev">
-                    <div className="box-img"></div>
-                        <div className="box-text">
-                            <p>Achivement #2</p>
-                        </div>
-                </div>
-                <div className="box-achiev">
-                    <div className="box-img"></div>
-                        <div className="box-text">
-                            <p>Achivement #3</p>
-                        </div>
-                </div>
-                <div className="box-achiev">
-                    <div className="box-img"></div>
-                        <div className="box-text">
-                            <p>Achivement #4</p>
-                        </div>
-                </div>
-            </div>
+        <div id="achievements">
+            <h1>Achievements</h1>
+            <Row sm={1} md={2} lg={4} className='justify-content-center gap-5'>
+            <Card style={{ width: '18rem' }}>
+                <Card.Img className='img-fluid' variant="top" src={Boy} />
+                    <Card.Body>
+                        <p className='text-center'>Achivement #1</p>
+                    </Card.Body>
+            </Card>
+            <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top" src={Girl} />
+                    <Card.Body>
+                        <p className='text-center'>Achivement #1</p>
+                    </Card.Body>
+            </Card>
+            <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top" src={Boy} />
+                    <Card.Body>
+                        <p className='text-center'>Achivement #1</p>
+                    </Card.Body>
+            </Card>
+            <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top" src={Girl} />
+                    <Card.Body>
+                        <p className='text-center'>Achivement #1</p>
+                    </Card.Body>
+            </Card>
+            </Row>
         </div>
     );
 }
