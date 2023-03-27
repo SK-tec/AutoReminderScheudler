@@ -6,7 +6,17 @@
   background-color: #789E52;
   text-decoration-color: blue;
 }
-
+.navbar-brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-left: 3rem;
+}
+.navLink{
+ margin-left: 2rem;
+ margin-right: 2rem;
+}
 #carousal{
   height:80vh;
 }
@@ -108,3 +118,4 @@
 }
 
 /*Sign In ends*/
+

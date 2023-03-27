@@ -2,6 +2,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import school from "../images/school.jpg";
 import students from "../images/students.png";
 import basketball from "../images/basketball.jpg";
+import Achivements from './Achivements';
 
 const Header = () => {
     return ( 
@@ -45,7 +46,7 @@ const Header = () => {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
- 
+    <Achivements/> 
     </> 
     );
 }
