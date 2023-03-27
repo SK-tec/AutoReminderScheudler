@@ -6,7 +6,7 @@ import basketball from "../images/basketball.jpg";
 const Header = () => {
     return ( 
     <>
-    <Carousel id="carousal">
+    <Carousel id="carousel">
       <Carousel.Item >
         <img
           className="d-block w-100"

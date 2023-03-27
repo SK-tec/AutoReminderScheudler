@@ -13,8 +13,8 @@ function App() {
       <MyNav />
       <Header />
       <Notices />
-      <Achivements/>
       <RegisterForm/>
+      <Achivements/>
      <Footer/>
     </div>
   );
