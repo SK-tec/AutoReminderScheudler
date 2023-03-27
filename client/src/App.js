@@ -5,6 +5,7 @@ import Achivements from './components/Achivements';
 import MyNav from './components/MyNav';
 import Header from './components/Header';
 import RegisterForm from './components/RegisterForm';
+import Signin from './components/Signin';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <MyNav />
       <Header />
       <RegisterForm/>
+     <Signin />
       <Achivements/>
      <Footer/>
     </div>
