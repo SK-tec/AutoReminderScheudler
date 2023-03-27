@@ -89,3 +89,22 @@
 }
 
 /*Regisration Form end */
+/*Sign In starts*/
+#signin {
+  background-color: rgb(247, 242, 237);
+  margin: 0 auto;
+  max-width: 500px;
+  
+  padding-left: 35px;
+  padding-right: 35px;
+}
+#signin h4{color:darkblue}
+#signin button {
+  background: darkblue;
+}
+#singin-form{
+  padding-left: 30px;
+  padding-right: 30px;  
+}
+
+/*Sign In ends*/
