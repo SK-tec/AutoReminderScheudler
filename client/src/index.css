@@ -17,11 +17,70 @@
  margin-left: 2rem;
  margin-right: 2rem;
 }
-#carousal{
-  height:80vh;
+#carousel{
+  height:auto;
 }
 
+
 /************* Navbar end ***********************/
+
+/************* Notice start ***********************/
+#notice{
+ 
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+}
+
+#Enquiry{
+  background-color: rgb(248, 239, 228);
+  border:10px solid white;
+}
+
+.ListGroup{
+  background-color: rgb(248, 239, 228);
+ padding-left: 10px;
+ padding-right: 10px;
+ object-fit: cover;
+
+}
+.ListGroup.Item{
+  object-fit: cover;
+}
+/************* notice end ***********************/
+
+
+/************* Notice start ***********************/
+#notice{
+ 
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+}
+#achievements .card img {
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+}
+
+#Enquiry{
+  background-color: rgb(248, 239, 228);
+  border:10px solid white;
+}
+
+.ListGroup{
+  background-color: rgb(248, 239, 228);
+ padding-left: 10px;
+ padding-right: 10px;
+ object-fit: cover;
+
+}
+.ListGroup.Item{
+  object-fit: cover;
+}
+/************* notice end ***********************/
+
 
 #achievements img{
   max-width: 100%;

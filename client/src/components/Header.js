@@ -3,11 +3,12 @@ import school from "../images/school.jpg";
 import students from "../images/students.png";
 import basketball from "../images/basketball.jpg";
 import Achivements from './Achivements';
+import Notices from './Notices';
 
 const Header = () => {
     return ( 
     <>
-    <Carousel id="carousal">
+    <Carousel id="carousel">
       <Carousel.Item >
         <img
           className="d-block w-100"
@@ -27,8 +28,7 @@ const Header = () => {
         />
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>The future begins here</h3>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -39,13 +39,12 @@ const Header = () => {
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <h3>Taking your game to the next level</h3>
+          
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    <Notices />
     <Achivements/> 
     </> 
     );
