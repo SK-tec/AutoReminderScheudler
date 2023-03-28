@@ -7,7 +7,10 @@ import { LinkContainer } from "react-router-bootstrap";
 const MyNav = () => {
     return ( 
     <>
-             <Navbar
+    
+    
+
+      <Navbar
         collapseOnSelect
         expand="lg"
         fixed="bootom"        
