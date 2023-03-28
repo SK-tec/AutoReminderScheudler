@@ -4,12 +4,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import { LinkContainer } from "react-router-bootstrap";
 
 
-const MyNav = () => {
-    return ( 
-    <>
-    
-    
 
+const MyNav = () => {
+  
+    return ( 
+<>
       <Navbar
         collapseOnSelect
         expand="lg"
