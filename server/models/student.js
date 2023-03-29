@@ -22,7 +22,7 @@ const studentSchema= new mongoose.Schema(
           tutionFee:{type: Number, required: [true, 'It must not be null, Required!']},
           paidFee:{type: Number},
           installments:{type: Number},
-          dueDate:{type:Date, required:[treu,'Due date required']},
+          dueDate:{type:Date, required:[true,'Due date required']},
     }
 )
 
