@@ -1,11 +1,9 @@
-import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { LinkContainer } from "react-router-bootstrap";
 import logo from "../images/Kidzee_logo.png";
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-
 import RegisterForm from './RegisterForm';
 
 
@@ -27,7 +25,7 @@ const Admin = () => {
                 <ul >
                     <li>                        
                         <LinkContainer to="/">
-                            <Nav.Link className="navLink py-5 fs-4">
+                            <Nav.Link className="navLink py-5 fs-5">
                                 <i className='bi bi-info-circle-fill' />
                                 <span className='ms-1 d-none d-sm-inline'>Staff</span>
                             </Nav.Link>
@@ -35,7 +33,7 @@ const Admin = () => {
                     </li>
                     <li>                       
                         <LinkContainer to="/">
-                            <Nav.Link className="navLink py-5 fs-4">
+                            <Nav.Link className="navLink py-5 fs-5">
                             <i className='bi-people-fill' /> 
                             <span className='ms-1 d-none d-sm-inline'>Students</span>
                             </Nav.Link>
@@ -43,7 +41,7 @@ const Admin = () => {
                     </li>
                     <li>                        
                         <LinkContainer to="/">
-                            <Nav.Link className="navLink py-5 fs-4">
+                            <Nav.Link className="navLink py-5 fs-5">
                             <i className='bi-table' />
                             <span className='ms-1 d-none d-sm-inline'>Events</span>
                             </Nav.Link>
@@ -51,7 +49,7 @@ const Admin = () => {
                     </li>
                     <li>
                         <LinkContainer to="/">
-                            <Nav.Link className="navLink py-5 fs-4">
+                            <Nav.Link className="navLink py-5 fs-5">
                             <i className='bi bi-three-dots-vertical' /> 
                             <span className='ms-1 d-none d-sm-inline'>More</span>
                             </Nav.Link>
@@ -60,16 +58,16 @@ const Admin = () => {
                 </ul>
 
             </div>
-            <div className="col">
+            <div id='tabs' className="col">
             <Nav variant="tabs" defaultActiveKey="/">
                 <Nav.Item>
-                    <Nav.Link eventKey={<RegisterForm />}>Rgister</Nav.Link>
+                    <Nav.Link className='text-dark' eventKey={<RegisterForm />}>Register</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="link-1">Fee</Nav.Link>
+                    <Nav.Link className='text-dark' eventKey="link-1">Fee</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="disabled">Record</Nav.Link>
+                    <Nav.Link className='text-dark' eventKey="disabled">Record</Nav.Link>
                 </Nav.Item>
             </Nav>
             </div>
