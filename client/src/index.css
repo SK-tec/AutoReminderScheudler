@@ -73,22 +73,21 @@
   flex-direction: column;
   align-items:center;
   font-family: 'Poppins', sans-serif;
-  background-color: #789E52;
+  background-color: #649632;
   text-decoration-color: blue;
   padding-right: 2em;
   padding-left: 0;
-  
 }
-
-
 
 li{
   list-style: none;
-  
- 
  }
 
+#tabs{
+  font-family: 'Poppins', sans-serif;
+  
 
+}
 
 /************* footer start ***********************/
 
