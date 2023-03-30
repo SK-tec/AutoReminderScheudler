@@ -4,10 +4,12 @@ import students from "../images/students.png";
 import basketball from "../images/basketball.jpg";
 import Achivements from './Achivements';
 import Notices from './Notices';
+import MyNav from './MyNav';
 
 const Header = () => {
     return ( 
     <>
+   
     <Carousel id="carousel">
       <Carousel.Item >
         <img

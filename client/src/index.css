@@ -3,7 +3,7 @@
 /************* Navbar start ***********************/
 .Navbar{
   font-family: 'Poppins', sans-serif;
-  background-color: #789E52;
+  background-color: #649632;
   text-decoration-color: blue;
 }
 .navbar-brand {
@@ -97,6 +97,30 @@
   transform: scale(1.03);
 }
 /************* achivements end ***********************/
+
+#sidebar{
+  margin: 0;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  font-family: 'Poppins', sans-serif;
+  background-color: #789E52;
+  text-decoration-color: blue;
+  padding-right: 2em;
+  padding-left: 0;
+  
+}
+
+
+
+li{
+  list-style: none;
+  
+ 
+ }
+
+
 
 /************* footer start ***********************/
 
