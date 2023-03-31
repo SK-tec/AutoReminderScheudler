@@ -60,6 +60,7 @@ const logout = (req, res) => {
   res.json({ message: "You have Successfully Logged Out!" });
 };
 const getLoggedInUser = async (req, res) => {
+  console.log("getLoggedInUser executed");
   try {
     const getAdmin = await Admin.findOne({ _id: req.user._id }).select(
       "-password"
