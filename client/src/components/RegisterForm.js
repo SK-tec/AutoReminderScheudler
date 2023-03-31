@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
@@ -6,7 +6,6 @@ import Row from "react-bootstrap/Row";
 import { Container, Card, Modal } from "react-bootstrap";
 import axios from "../axiosInstance";
 import { useNavigate } from "react-router-dom";
-import Toast from "react-bootstrap/Toast";
 
 const RegisterForm = () => {
   const navigate = useNavigate();
