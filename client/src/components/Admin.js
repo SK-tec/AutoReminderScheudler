@@ -5,6 +5,9 @@ import logo from "../images/Kidzee_logo.png";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import RegisterForm from "./RegisterForm";
+import Tabs from "react-bootstrap/Tabs";
+import Tab from "react-bootstrap/Tab";
+import StudentDetails from "./StudentDetails";
 
 const Admin = () => {
   return (
@@ -52,23 +55,41 @@ const Admin = () => {
           </ul>
         </div>
         <div id="tabs" className="col">
-          <Nav variant="tabs" defaultActiveKey="/">
+          <div style={{ display: "block", width: 1000, padding: 30 }}>
+            <Tabs defaultActiveKey="second">
+              <Tab eventKey="first" title="Register">
+                <RegisterForm />
+              </Tab>
+              <Tab eventKey="second" title="Fee">
+                <StudentDetails />
+              </Tab>
+              <Tab eventKey="third" title="Attendance">
+                Hii, I am Attendance tab and it's Underconstruction
+              </Tab>
+              <Tab eventKey="fourth" title="Others">
+                Hii, Underconstruction
+              </Tab>
+            </Tabs>
+          </div>
+          {/* <Nav variant="tabs" defaultActiveKey="/">
             <Nav.Item>
               <Nav.Link className="text-dark" eventKey={<RegisterForm />}>
                 Register
               </Nav.Link>
+              Hii, I am Register tab content
             </Nav.Item>
             <Nav.Item>
               <Nav.Link className="text-dark" eventKey="link-1">
                 Fee
               </Nav.Link>
+              Hii, I am Fee tab content
             </Nav.Item>
             <Nav.Item>
               <Nav.Link className="text-dark" eventKey="disabled">
                 Record
               </Nav.Link>
             </Nav.Item>
-          </Nav>
+          </Nav> */}
         </div>
       </div>
     </div>
