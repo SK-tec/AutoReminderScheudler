@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from '../axiosInstance';
+import { Table } from "./Table";
 
-const StudentDetails = () => {
+const StudentDetails = ({data}) => {
   const [studentData, setStudentData] = useState([]);
-
   useEffect(() => {
     axios.get("/api/students").then((res) => {
       /*console.log(res.data);*/
@@ -13,15 +13,20 @@ const StudentDetails = () => {
     })
   }, []);
 
-  console.log(studentData[0]?.firstName);
+  const column = [
+    { heading: 'First Name' },
+    { heading: 'Last Name'},
+    { heading: 'Email'},
+    { heading: 'Class Name'},
+    { heading: 'Due Fee'},
+  ]
 
   return (
     <>
-      {studentData.map(student => 
-        student.firstName
-      )};
+    <Table data={studentData} column={column}/>
     </>
   );
 };
+
 
 export default StudentDetails;
