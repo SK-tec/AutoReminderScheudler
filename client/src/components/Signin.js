@@ -1,13 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import {
-  Container,
-  Form,
-  InputGroup,
-  Button,
-  Card,
-  Modal,
-} from "react-bootstrap";
+import { Container, Form, InputGroup, Button, Card } from "react-bootstrap";
 
 import axios from "../axiosInstance";
 import { useNavigate } from "react-router-dom";
@@ -35,9 +28,6 @@ const Signin = ({ setIsLoggedin }) => {
         console.log(err.response.data);
       });
   };
-  // const [show, setShow] = useState(false);
-  // const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
 
   return (
     <Container className="py-5 mb-5 ">
@@ -90,17 +80,6 @@ const Signin = ({ setIsLoggedin }) => {
           </Button>
         </Form>
       </Card>
-      {/* <Modal show={show} onHide={handleClose} animation={false}>
-        <Modal.Header closeButton>
-          <Modal.Title>Login Error</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Invalid Email / Password !</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal> */}
     </Container>
   );
 };

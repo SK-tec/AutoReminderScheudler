@@ -3,7 +3,7 @@ const Student = require("../models/student");
 const createStudentProfile = async (req, res) => {
   try {
     const newStudent = await Student.create({ ...req.body });
-    res.status(201).json(newStudent);
+    res.status(201).json({ message: "Data registered Successfully" });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

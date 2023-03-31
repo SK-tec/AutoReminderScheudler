@@ -1,29 +1,45 @@
-import React, { useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
-import { Container, Card } from "react-bootstrap";
+import { Container, Card, Modal } from "react-bootstrap";
 import axios from "../axiosInstance";
 import { useNavigate } from "react-router-dom";
 
 const RegisterForm = () => {
   const navigate = useNavigate();
   const [form, setForm] = useState({});
+  const formRef = useRef(null);
+  const [message, setMessage] = useState("");
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
+  const handleReset = () => {
+    formRef.current.reset();
+  };
   const handleSubmit = (event) => {
     event.preventDefault();
-    //console.log(gender);
-    // setForm({ ...form, gender: gender });
     console.log(form);
 
     axios
       .post(`/api/students`, form)
-      .then((res) => navigate(`/`))
-      .catch((e) => console.log(e));
+      .then((res) => {
+        setMessage("Data Inserted successfully");
+        console.log(res);
+        handleShow();
+        handleReset();
+        navigate(`/admin`);
+      })
+      .catch((err) => {
+        setMessage("Input Data Error");
+        handleShow();
+        console.log(err);
+      });
   };
   return (
     <>
@@ -33,7 +49,8 @@ const RegisterForm = () => {
             {" "}
             <h2> Registration Form</h2>
           </Card.Header>
-          <Form onSubmit={handleSubmit}>
+
+          <Form ref={formRef} onSubmit={handleSubmit}>
             <Card.Title className="text-start p-3">Student Info</Card.Title>
             <Card.Text className="personal-info">
               <Row className="mb-3">
@@ -260,6 +277,17 @@ const RegisterForm = () => {
             </Button>
           </Form>
         </Card>
+        <Modal show={show} onHide={handleClose} animation={false}>
+          <Modal.Header closeButton>
+            <Modal.Title>Message</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>{message}</Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </Container>
     </>
   );

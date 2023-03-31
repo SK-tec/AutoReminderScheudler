@@ -7,7 +7,6 @@ import RegisterForm from "./components/RegisterForm";
 import Signin from "./components/Signin";
 import { Routes, Route } from "react-router-dom";
 import Admin from "./components/Admin";
-import Notices from "./components/Notices";
 
 import { useState } from "react";
 function App() {

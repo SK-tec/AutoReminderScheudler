@@ -17,7 +17,7 @@ const MyNav = ({ isLoggedin, setIsLoggedin }) => {
       .catch((err) => {
         console.log(err.response.data);
       });
-  }, [isLoggedin]);
+  }, [isLoggedin, setIsLoggedin]);
   const handleLogout = () => {
     axios.post("/auth/logout", {}).then((res) => {
       console.log("Logged out");
