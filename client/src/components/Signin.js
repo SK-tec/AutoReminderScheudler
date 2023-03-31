@@ -29,7 +29,7 @@ const Signin = ({ setIsLoggedin }) => {
       .then((res) => {
         console.log(res.data);
         setIsLoggedin(true);
-        navigate("/");
+        navigate("/admin");
       })
       .catch((err) => {
         console.log(err.response.data);
@@ -41,8 +41,9 @@ const Signin = ({ setIsLoggedin }) => {
 
   return (
     <Container className="py-5 mb-5 ">
+      <h2 style={{ color: "navy" }}>Welcome To Admin DashBoard</h2>
       <Card border="secondary" className="mt-5" id="signin">
-        <Form className="py-5" id="singin-form">
+        <Form className="py-5" id="singin-form" onSubmit={handleSubmit}>
           <Form.Group className="formgroup mb-4">
             <Form.Label>
               {" "}
@@ -83,13 +84,7 @@ const Signin = ({ setIsLoggedin }) => {
               ></Form.Control>
             </InputGroup>
           </Form.Group>
-          <Button
-            block="true"
-            size="md"
-            className="mt-5"
-            type="submit"
-            onSubmit={handleSubmit}
-          >
+          <Button size="md" className="mt-5" type="submit">
             {" "}
             Sign In{" "}
           </Button>
