@@ -1,5 +1,9 @@
 
+
+import axios from '../axiosInstance';
+
 export const Table = ({data, column}) => {
+  
 
   return (
     <div>
@@ -17,6 +21,10 @@ export const Table = ({data, column}) => {
             <td>{item.email}</td>
             <td>{item.class_name}</td>
             <td>{item.dueFee}</td>
+            <td>{item.dueDate}</td>
+            <td>
+              <button type="submit">update</button></td>
+              
             </tr> )}
         </tbody>
       </table>
