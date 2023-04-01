@@ -32,7 +32,7 @@ const StudentDetails = ({data}) => {
   return (
     <>
     <Table data={studentData} column={column}/>
-    
+    <FeeUpdateForm />
     </>
   );
 };

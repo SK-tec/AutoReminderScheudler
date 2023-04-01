@@ -27,20 +27,20 @@ export const Table = ({data, column}) => {
         <table className="table table-bordered border-primary">
         <thead>
             <tr>
-            {column.map((item, index) => <TableHeadItem item={item}/>)}
+            {column.map((student, index) => <TableHeadItem student={student}/>)}
             </tr>
         </thead>
         <tbody>
             {/*{data.map((item, index) => <TableRow item={item}/>)}*/}
-            {data.map((item, index) =><tr>
-            <td>{item.firstName}</td>
-            <td>{item.lastName}</td>
-            <td>{item.email}</td>
-            <td>{item.class_name}</td>
-            <td>{item.dueFee}</td>
-            <td>{item.dueDate}</td>
+            {data.map((student, index) =><tr>
+            <td>{student.firstName}</td>
+            <td>{student.lastName}</td>
+            <td>{student.email}</td>
+            <td>{student.class_name}</td>
+            <td>{student.dueFee}</td>
+            <td>{student.dueDate}</td>
             <td>
-            <Link to={`/registerForm` }>
+            <Link to={`/FeeUpdateForm` }>
               <button >Update</button>
             </Link>
             </td>
@@ -55,5 +55,5 @@ export const Table = ({data, column}) => {
   )
 }
 
-const TableHeadItem = ({ item }) => <th>{item.heading}</th>
+const TableHeadItem = ({ student }) => <th>{student.heading}</th>
 
