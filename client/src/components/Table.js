@@ -1,10 +1,27 @@
-
-
 import axios from '../axiosInstance';
+import { useParams, useNavigate, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 export const Table = ({data, column}) => {
-  
+  const [student, setStudent] = useState([]);
+  const { id } = useParams();
+  const navigate = useNavigate();
+ 
 
+  useEffect(() => {
+    console.log(id);
+    axios
+      .get(`/api/students/${id}`)
+      .then((res) => setStudent(res.data))
+      .catch((e) => console.log(e));
+  }, [id]);
+
+  const handleRemove = () => {
+    axios
+      .delete(`/api/students/${id}`)
+      .then((res) => navigate("/"))
+      .catch((e) => console.log(e));
+  };
   return (
     <div>
         <table className="table table-bordered border-primary">
@@ -23,7 +40,13 @@ export const Table = ({data, column}) => {
             <td>{item.dueFee}</td>
             <td>{item.dueDate}</td>
             <td>
-              <button type="submit">update</button></td>
+            <Link to={`/registerForm` }>
+              <button >Update</button>
+            </Link>
+            </td>
+            <td>
+              <button onClick={handleRemove}  >Delete</button>
+            </td>
               
             </tr> )}
         </tbody>

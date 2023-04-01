@@ -26,12 +26,13 @@ const StudentDetails = ({data}) => {
     { heading: 'Due Fee'},
     { heading: 'Due Date'},
     { heading: 'Update'},
+    { heading: 'Delete'},
   ]
 
   return (
     <>
     <Table data={studentData} column={column}/>
-    <FeeUpdateForm />
+    
     </>
   );
 };

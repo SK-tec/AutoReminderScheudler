@@ -1,11 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import { Container, Card, Modal } from "react-bootstrap";
 import axios from "../axiosInstance";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const FeeUpdateForm = () => {
   const navigate = useNavigate();
@@ -15,6 +15,19 @@ const FeeUpdateForm = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const { id } = useParams();
+  const [student, setStudent] = useState([]);
+
+  
+  useEffect(() => {
+    console.log(id);
+    axios
+      .get(`/api/students/${id}`)
+      .then((res) => setStudent(res.data))
+      .catch((e) => console.log(e));
+  }, [id]);
+
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
@@ -25,11 +38,11 @@ const FeeUpdateForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(form);
-
+if(id){
     axios
-      .put(`/api/students`, form)
+      .put(`/api/students/${id}`, form)
       .then((res) => {
-        setMessage("Data Inserted successfully");
+        setMessage("Data Updated successfully");
         console.log(res);
         handleShow();
         handleReset();
@@ -40,6 +53,7 @@ const FeeUpdateForm = () => {
         handleShow();
         console.log(err);
       });
+    }
   };
   return (
     <>
@@ -54,7 +68,7 @@ const FeeUpdateForm = () => {
              <Card.Text className="personal-info">
               <Row className="mb-3">
                 <Form.Group as={Col} md="6" className=" mt-3">
-                  <Form.Label>First name</Form.Label>
+                  <Form.Label>First name: {student.firstName}</Form.Label>
                   <Form.Control
                     required
                     type="text"
@@ -143,6 +157,7 @@ const FeeUpdateForm = () => {
             <Button type="submit" className="mb-3">
               Update
             </Button>
+            
           </Form>
         </Card>
         <Modal show={show} onHide={handleClose} animation={false}>
