@@ -1,12 +1,13 @@
-import axios from '../axiosInstance';
+import axios from "../axiosInstance";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Button } from "react-bootstrap";
+import UpdateForm from "./UpdateForm";
 
-export const Table = ({data, column}) => {
+export const Table = ({ data, column }) => {
   const [student, setStudent] = useState([]);
   const { id } = useParams();
   const navigate = useNavigate();
- 
 
   useEffect(() => {
     console.log(id);
@@ -24,36 +25,41 @@ export const Table = ({data, column}) => {
   };
   return (
     <div>
-        <table className="table table-bordered border-primary">
+      <table className="table table-bordered border-primary">
         <thead>
-            <tr>
-            {column.map((student, index) => <TableHeadItem student={student}/>)}
-            </tr>
+          <tr>
+            {column.map((student, index) => (
+              <TableHeadItem student={student} />
+            ))}
+          </tr>
         </thead>
         <tbody>
-            {/*{data.map((item, index) => <TableRow item={item}/>)}*/}
-            {data.map((student, index) =><tr>
-            <td>{student.firstName}</td>
-            <td>{student.lastName}</td>
-            <td>{student.email}</td>
-            <td>{student.class_name}</td>
-            <td>{student.dueFee}</td>
-            <td>{student.dueDate}</td>
-            <td>
-            <Link to={`/FeeUpdateForm` }>
-              <button >Update</button>
-            </Link>
-            </td>
-            <td>
-              <button onClick={handleRemove}  >Delete</button>
-            </td>
-              
-            </tr> )}
+          {/*{data.map((item, index) => <TableRow item={item}/>)}*/}
+          {data.map((student, index) => (
+            <tr>
+              <td>{student.firstName}</td>
+              <td>{student.lastName}</td>
+              <td>{student.email}</td>
+              <td>{student.class_name}</td>
+              <td>{student.dueFee}</td>
+              <td>{student.dueDate}</td>
+              <td>
+                <UpdateForm id={student._id} />
+                {/* <Button variant="link">
+                  <i class="bi bi-pencil-square"></i>
+                </Button> */}
+              </td>
+              <td>
+                <Button variant="link" onClick={handleRemove}>
+                  <i className="bi bi-trash"></i>
+                </Button>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
-  )
-}
+  );
+};
 
-const TableHeadItem = ({ student }) => <th>{student.heading}</th>
-
+const TableHeadItem = ({ student }) => <th>{student.heading}</th>;
