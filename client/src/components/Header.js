@@ -2,6 +2,8 @@ import Carousel from "react-bootstrap/Carousel";
 import school from "../images/school.jpg";
 import students from "../images/students.png";
 import basketball from "../images/basketball.jpg";
+import sport from "../images/Sports.jpg";
+import sport2 from "../images/sport2.jpg";
 import Achivements from "./Achivements";
 import Notices from "./Notices";
 
@@ -23,7 +25,14 @@ const Header = () => {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={basketball} alt="Third slide" />
+          <img className="d-block w-100" src={sport} alt="Third slide" />
+
+          <Carousel.Caption>
+            <h3>Taking your game to the next level</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100" src={sport2} alt="Third slide" />
 
           <Carousel.Caption>
             <h3>Taking your game to the next level</h3>
