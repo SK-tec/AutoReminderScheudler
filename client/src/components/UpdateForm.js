@@ -16,14 +16,6 @@ export const UpdateForm = ({ id }) => {
   const formRef = useRef(null);
   const [message, setMessage] = useState("");
 
-  //   useEffect(() => {
-  //     axios
-  //       .get(`/api/students/${id}`)
-  //       .then((res) => {
-  //         setStudent(res.data);
-  //       }, [])
-  //       .catch((e) => console.log(e));
-  //   }, [id]);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });

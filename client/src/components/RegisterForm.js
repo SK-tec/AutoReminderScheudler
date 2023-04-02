@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
@@ -12,11 +12,34 @@ const RegisterForm = () => {
   const [form, setForm] = useState({});
   const formRef = useRef(null);
   const [message, setMessage] = useState("");
+  const [paidfee, setPaidFee] = useState(0);
+  const [duefee, setDueFee] = useState(0);
+  const [age, setAge] = useState(0);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  useEffect(() => {
+    setDueFee(Number(form.tutionFee) - Number(paidfee));
+    setAge(getAge(form.dob));
+    setForm({ ...form, dueFee: duefee, age: age });
+  }, [form, paidfee, age]);
   const handleChange = (e) => {
     const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
+  const getAge = (dateString) => {
+    let today = new Date();
+    let birthDate = new Date(dateString);
+    let age = today.getFullYear() - birthDate.getFullYear();
+    let m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    return age;
+  };
+  const handleFeeChange = (e) => {
+    const { name, value } = e.target;
+    setPaidFee(value);
     setForm({ ...form, [name]: value });
   };
   const handleReset = () => {
@@ -120,7 +143,7 @@ const RegisterForm = () => {
                     placeholder="Age"
                     className="w-75 mx-auto mt-3"
                     name="age"
-                    onChange={handleChange}
+                    value={age}
                   />
                 </Form.Group>
                 <Form.Group as={Col} md="6" mb-3 mt-3>
@@ -220,7 +243,8 @@ const RegisterForm = () => {
                     type="text"
                     placeholder="Paid Fee"
                     name="paidFee"
-                    onChange={handleChange}
+                    value={paidfee}
+                    onChange={handleFeeChange}
                   />
                 </Col>
               </Form.Group>
@@ -233,7 +257,7 @@ const RegisterForm = () => {
                     type="text"
                     placeholder="Remaining Fee"
                     name="dueFee"
-                    onChange={handleChange}
+                    value={duefee}
                   />
                 </Col>
                 <Form.Label column sm={2}>
