@@ -9,7 +9,7 @@ import Button from "react-bootstrap/Button";
 function Notices() {
   return (
     <Container id="notice" className=" d-flex flex-wrap">
-      <Container id="Enquiry" className="mt-4 w-50 ">
+      {/* <Container id="Enquiry" className="mt-4 w-50 ">
         <Card.Title className="bg-warning text-center p-2">
           Enquiry Form
         </Card.Title>
@@ -75,9 +75,12 @@ function Notices() {
             Submit
           </Button>
         </Card.Text>
-      </Container>
+      </Container> */}
+      <h2 style={{ color: "navy" }} className="mt-5">
+        Welcome To Kidzee
+      </h2>
 
-      <Container id="Enquiry" className="mt-4 w-50 ">
+      <Container id="Enquiry" className="mt-4 w-75 ">
         <lable>
           <Card.Title className="bg-warning text-center p-2 ">
             Notice

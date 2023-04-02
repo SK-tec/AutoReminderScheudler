@@ -4,8 +4,9 @@ require("dotenv/config");
 const connectDB = require("./config/db");
 const studentsRouter = require("./routes/students");
 const authenticRouter = require("./routes/admin");
+const mailRouter = require("./routes/mailrouter");
 const path = require("path");
-const cookieParser=require('cookie-parser');
+const cookieParser = require("cookie-parser");
 const PORT = process.env.PORT || 8000;
 const app = express();
 app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true }));
@@ -13,6 +14,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use("/api/students", studentsRouter);
 app.use("/auth", authenticRouter);
+app.use("/api/enquiry", mailRouter);
 if (process.env.NODE_ENV === "production") {
   const buildPath = path.join(__dirname, "../client/build");
   app.use(express.static(buildPath));
