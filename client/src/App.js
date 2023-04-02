@@ -7,6 +7,7 @@ import RegisterForm from "./components/RegisterForm";
 import Signin from "./components/Signin";
 import { Routes, Route } from "react-router-dom";
 import Admin from "./components/Admin";
+import Contact from "./components/Contact";
 
 import { useState } from "react";
 function App() {
@@ -16,8 +17,8 @@ function App() {
       <MyNav isLoggedin={isLoggedin} setIsLoggedin={setIsLoggedin} />
       <Routes>
         <Route path="/" element={<Header />} />
-        {/* <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/contact" element={<Contact />} /> */}
+        {/* <Route path="/aboutus" element={<AboutUs />} />*/}
+        <Route path="/contact" element={<Contact />} />
         <Route path="/admin" element={<Admin />} />
         <Route
           path="/signin"
