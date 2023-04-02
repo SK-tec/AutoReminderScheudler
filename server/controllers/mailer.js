@@ -1,25 +1,13 @@
 const nodemailer = require("nodemailer");
-
 const contactEmail = nodemailer.createTransport({
-  host: "mail.ecorvi.com",
+  service: "gmail",
+  host: "smtp.gmail.com",
   port: 587,
-  //secure: false, // upgrade later with STARTTLS
+  secure: false,
   auth: {
-    user: "samatha.kasireddy@ecorvi.com",
-    pass: "mich@REG42",
+    user: "kidzee.wbs@gmail.com",
+    pass: "project@123",
   },
-  tls: {
-    rejectUnauthorized: false,
-  },
-  /*service: 'gmail',
- auth: {
-   user: "samathagamidi@gmail.com",
-   pass: "nlvgbpkrwguaglcn",
- },*/
-  /*auth: {
-     user: "***************@gmail.com",
-     pass: "********",
-   },*/
 });
 
 contactEmail.verify((error) => {
@@ -38,8 +26,7 @@ const createEnquiry = async (req, res) => {
     const message = req.body.query;
     const mail = {
       from: name,
-      //to: "samathagamidi@gmail.com",
-      to: "samatha.kasireddy@ecorvi.com",
+      to: "kidzee.wbs@gmail.com",
       subject: "Kidzee Enquiry",
       html: `<p>Name: ${name}</p>
              <p>Email: ${email}</p>
