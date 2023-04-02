@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from '../axiosInstance';
 import { Table } from "./Table";
+import FeeUpdateForm from './FeeUpdateForm';
+
+
 
 const StudentDetails = ({data}) => {
   const [studentData, setStudentData] = useState([]);
   useEffect(() => {
-    axios.get("/api/students").then((res) => {
+    axios.get("/api/students")
+    .then((res) => {
       /*console.log(res.data);*/
       setStudentData(res.data);
     }).catch(error => {
@@ -19,11 +24,15 @@ const StudentDetails = ({data}) => {
     { heading: 'Email'},
     { heading: 'Class Name'},
     { heading: 'Due Fee'},
+    { heading: 'Due Date'},
+    { heading: 'Update'},
+    { heading: 'Delete'},
   ]
 
   return (
     <>
     <Table data={studentData} column={column}/>
+    <FeeUpdateForm />
     </>
   );
 };
