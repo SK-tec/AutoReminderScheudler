@@ -61,7 +61,7 @@ export const UpdateForm = ({ id }) => {
       .catch((e) => console.log(e));
   };
   return (
-    <div>
+    <div >
       <Button variant="link" onClick={handleClick}>
         <i class="bi bi-pencil-square"></i>
       </Button>
@@ -74,7 +74,7 @@ export const UpdateForm = ({ id }) => {
             <Card.Text className="personal-info">
               <Row className="mb-3">
                 <Form.Group as={Col} md="6" className=" mt-3">
-                  <Form.Label>First name: {student.firstName}</Form.Label>
+                  <Form.Label>First name</Form.Label>
                   <Form.Control
                     required
                     type="text"
@@ -127,30 +127,35 @@ export const UpdateForm = ({ id }) => {
               </Row>
 
               <Row className="mb-2">
-                <Form.Group as={Row} className="mb-3 mt-3">
-                  <Form.Label column sm={2}>
+                <Form.Group as={Col} md="6" className="mb-3 mt-3">
+                  <Form.Label row sm={3}>
                     Due Fee
                   </Form.Label>
-                  <Col sm={3}>
+                  
                     <Form.Control
                       type="text"
                       placeholder="Remaining Fee"
+                      className="w-75 mx-auto mt-2"
                       name="dueFee"
+                      value={student.dueFee}
                       onChange={handleChange}
                     />
-                  </Col>
-
-                  <Form.Label column sm={3}>
+                  
+                  </Form.Group>
+                  <Form.Group as={Col} className="mb-3 mt-3">
+                  <Form.Label row sm={3}>
                     Due Date
                   </Form.Label>
-                  <Col sm={4}>
+                  
                     <Form.Control
                       type="date"
                       placeholder="Due date"
+                      className="w-75 mx-auto mt-2"
                       name="dueDate"
+                      value={student.dueDate}
                       onChange={handleChange}
                     />
-                  </Col>
+                  
                 </Form.Group>
               </Row>
             </Card.Text>
