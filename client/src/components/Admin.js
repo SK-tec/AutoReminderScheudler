@@ -11,7 +11,6 @@ import StudentDetails from "./StudentDetails";
 
 const Admin = () => {
   return (
-    
     <div className="container-fluid sideNav">
       <div className="row">
         <div id="sidebar" className="col-auto  bg-[#649632]">

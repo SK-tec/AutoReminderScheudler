@@ -3,6 +3,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import UpdateForm from "./UpdateForm";
+import moment from "moment";
 
 export const Table = ({ data, column }) => {
   const [student, setStudent] = useState([]);
@@ -42,7 +43,8 @@ export const Table = ({ data, column }) => {
               <td>{student.email}</td>
               <td>{student.class_name}</td>
               <td>{student.dueFee}</td>
-              <td>{student.dueDate}</td>
+              <td>{moment(student.dueDate).format("MM/DD/YYYY")}</td>
+
               <td>
                 <UpdateForm id={student._id} />
                 {/* <Button variant="link">
