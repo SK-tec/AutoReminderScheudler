@@ -5,8 +5,8 @@ const contactEmail = nodemailer.createTransport({
   port: 587,
   secure: false,
   auth: {
-    user: "kidzee.wbs@gmail.com",
-    pass: "project@123",
+    user: process.env.EMAIL_TEST,
+    pass: process.env.EMAIL_TEST_APP_PWD,
   },
 });
 

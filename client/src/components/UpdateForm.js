@@ -4,10 +4,9 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import { Row, Col, Button, Card } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
+import moment from "moment";
 
 export const UpdateForm = ({ id }) => {
-  const [student, setStudent] = useState({});
-  //const { id } = useParams();
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -20,19 +19,20 @@ export const UpdateForm = ({ id }) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
-  const handleReset = () => {
-    formRef.current.reset();
-  };
+
   const handleClick = (e) => {
     e.preventDefault();
     axios
       .get(`/api/students/${id}`)
       .then((res) => {
-        setStudent(res.data);
-        console.log(student);
-      }, [])
+        setForm(res.data);
+        console.log(res.data);
+      })
       .catch((e) => console.log(e));
     handleShow();
+  };
+  const handleReset = () => {
+    formRef.current.reset();
   };
   const handleSave = (e) => {
     e.preventDefault();
@@ -43,12 +43,13 @@ export const UpdateForm = ({ id }) => {
           setMessage("Data Updated successfully");
           console.log(res);
 
+          handleShow();
           handleReset();
           navigate(`/admin`);
         })
         .catch((err) => {
           setMessage("Input Data Error");
-
+          handleShow();
           console.log(err);
         });
     }
@@ -61,7 +62,7 @@ export const UpdateForm = ({ id }) => {
       .catch((e) => console.log(e));
   };
   return (
-    <div >
+    <div>
       <Button variant="link" onClick={handleClick}>
         <i class="bi bi-pencil-square"></i>
       </Button>
@@ -81,7 +82,7 @@ export const UpdateForm = ({ id }) => {
                     placeholder="First name"
                     className="w-75 mx-auto mt-2"
                     name="firstName"
-                    value={student.firstName}
+                    value={form.firstName}
                     readOnly
                   />
                 </Form.Group>
@@ -93,7 +94,7 @@ export const UpdateForm = ({ id }) => {
                     placeholder="Last name"
                     className="w-75 mx-auto mt-2"
                     name="lastName"
-                    value={student.lastName}
+                    value={form.lastName}
                     readOnly
                   />
                 </Form.Group>
@@ -108,7 +109,7 @@ export const UpdateForm = ({ id }) => {
                     placeholder="Email Id"
                     className="w-75 mx-auto mt-2"
                     name="email"
-                    value={student.email}
+                    value={form.email}
                     readOnly
                   />
                 </Form.Group>
@@ -119,10 +120,9 @@ export const UpdateForm = ({ id }) => {
                     className="w-75 mx-auto mt-2"
                     type="text"
                     name="class_name"
-                    value={student.class_name}
+                    value={form.class_name}
                     readOnly
-                  >
-                  </Form.Control>
+                  ></Form.Control>
                 </Form.Group>
               </Row>
 
@@ -131,31 +131,29 @@ export const UpdateForm = ({ id }) => {
                   <Form.Label row sm={3}>
                     Due Fee
                   </Form.Label>
-                  
-                    <Form.Control
-                      type="text"
-                      placeholder="Remaining Fee"
-                      className="w-75 mx-auto mt-2"
-                      name="dueFee"
-                      value={student.dueFee}
-                      onChange={handleChange}
-                    />
-                  
-                  </Form.Group>
-                  <Form.Group as={Col} className="mb-3 mt-3">
+
+                  <Form.Control
+                    type="text"
+                    placeholder="Remaining Fee"
+                    className="w-75 mx-auto mt-2"
+                    name="dueFee"
+                    value={form.dueFee}
+                    onChange={handleChange}
+                  />
+                </Form.Group>
+                <Form.Group as={Col} className="mb-3 mt-3">
                   <Form.Label row sm={3}>
-                    Due Date
+                    Due Date:{moment(form.dueDate).format("MM/DD/YYYY")}
                   </Form.Label>
-                  
-                    <Form.Control
-                      type="date"
-                      placeholder="Due date"
-                      className="w-75 mx-auto mt-2"
-                      name="dueDate"
-                      value={student.dueDate}
-                      onChange={handleChange}
-                    />
-                  
+
+                  <Form.Control
+                    type="date"
+                    placeholder="Due date"
+                    className="w-75 mx-auto mt-2"
+                    name="dueDate"
+                    //value={moment(form.dueDate).format("MM/DD/YYYY")}
+                    onChange={handleChange}
+                  />
                 </Form.Group>
               </Row>
             </Card.Text>
