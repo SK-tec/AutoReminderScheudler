@@ -93,6 +93,8 @@ export const UpdateForm = ({ id }) => {
                     placeholder="Last name"
                     className="w-75 mx-auto mt-2"
                     name="lastName"
+                    value={student.lastName}
+                    readOnly
                   />
                 </Form.Group>
               </Row>
@@ -106,25 +108,21 @@ export const UpdateForm = ({ id }) => {
                     placeholder="Email Id"
                     className="w-75 mx-auto mt-2"
                     name="email"
+                    value={student.email}
+                    readOnly
                   />
                 </Form.Group>
                 <Form.Group as={Col} md="6">
                   <Form.Label>Class</Form.Label> <br />
-                  <Form.Select
+                  <Form.Control
                     aria-label="Default select example"
                     className="w-75 mx-auto mt-2"
+                    type="text"
                     name="class_name"
-                    onChange={handleChange}
+                    value={student.class_name}
+                    readOnly
                   >
-                    <option>Select Class</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                  </Form.Select>
+                  </Form.Control>
                 </Form.Group>
               </Row>
 
