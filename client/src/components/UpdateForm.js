@@ -6,6 +6,7 @@ import { Row, Col, Button, Card } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
 
 export const UpdateForm = ({ id }) => {
+  const [student, setStudent] = useState({});
   //const { id } = useParams();
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
@@ -16,7 +17,6 @@ export const UpdateForm = ({ id }) => {
   const [message, setMessage] = useState("");
 
   const handleChange = (e) => {
-    //console.log(e.target.name);
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
@@ -28,8 +28,8 @@ export const UpdateForm = ({ id }) => {
     axios
       .get(`/api/students/${id}`)
       .then((res) => {
-        setForm(res.data);
-        console.log(res.data.dueDate);
+        setStudent(res.data);
+        console.log(student);
       }, [])
       .catch((e) => console.log(e));
     handleShow();
@@ -61,7 +61,7 @@ export const UpdateForm = ({ id }) => {
       .catch((e) => console.log(e));
   };
   return (
-    <div>
+    <div >
       <Button variant="link" onClick={handleClick}>
         <i class="bi bi-pencil-square"></i>
       </Button>
@@ -74,14 +74,14 @@ export const UpdateForm = ({ id }) => {
             <Card.Text className="personal-info">
               <Row className="mb-3">
                 <Form.Group as={Col} md="6" className=" mt-3">
-                  <Form.Label>First name: </Form.Label>
+                  <Form.Label>First name</Form.Label>
                   <Form.Control
                     required
                     type="text"
                     placeholder="First name"
                     className="w-75 mx-auto mt-2"
                     name="firstName"
-                    value={form.firstName}
+                    value={student.firstName}
                     readOnly
                   />
                 </Form.Group>
@@ -93,7 +93,7 @@ export const UpdateForm = ({ id }) => {
                     placeholder="Last name"
                     className="w-75 mx-auto mt-2"
                     name="lastName"
-                    value={form.lastName}
+                    value={student.lastName}
                     readOnly
                   />
                 </Form.Group>
@@ -108,7 +108,7 @@ export const UpdateForm = ({ id }) => {
                     placeholder="Email Id"
                     className="w-75 mx-auto mt-2"
                     name="email"
-                    value={form.email}
+                    value={student.email}
                     readOnly
                   />
                 </Form.Group>
@@ -119,39 +119,43 @@ export const UpdateForm = ({ id }) => {
                     className="w-75 mx-auto mt-2"
                     type="text"
                     name="class_name"
-                    value={form.class_name}
+                    value={student.class_name}
                     readOnly
-                  ></Form.Control>
+                  >
+                  </Form.Control>
                 </Form.Group>
               </Row>
 
               <Row className="mb-2">
-                <Form.Group as={Row} className="mb-3 mt-3">
-                  <Form.Label column sm={2}>
+                <Form.Group as={Col} md="6" className="mb-3 mt-3">
+                  <Form.Label row sm={3}>
                     Due Fee
                   </Form.Label>
-                  <Col sm={3}>
+                  
                     <Form.Control
                       type="text"
                       placeholder="Remaining Fee"
+                      className="w-75 mx-auto mt-2"
                       name="dueFee"
-                      value={form.dueFee}
+                      value={student.dueFee}
                       onChange={handleChange}
                     />
-                  </Col>
-
-                  <Form.Label column sm={3}>
+                  
+                  </Form.Group>
+                  <Form.Group as={Col} className="mb-3 mt-3">
+                  <Form.Label row sm={3}>
                     Due Date
                   </Form.Label>
-                  <Col sm={4}>
+                  
                     <Form.Control
                       type="date"
                       placeholder="Due date"
+                      className="w-75 mx-auto mt-2"
                       name="dueDate"
-                      value={form.dueDate}
+                      value={student.dueDate}
                       onChange={handleChange}
                     />
-                  </Col>
+                  
                 </Form.Group>
               </Row>
             </Card.Text>
