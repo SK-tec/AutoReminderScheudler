@@ -11,9 +11,10 @@ import StudentDetails from "./StudentDetails";
 
 const Admin = () => {
   return (
+    
     <div className="container-fluid sideNav">
       <div className="row">
-        <div id="sidebar" className="col-auto min-vh-100 bg-[#649632]">
+        <div id="sidebar" className="col-auto  bg-[#649632]">
           <LinkContainer to="/">
             <Navbar.Brand href="#home">
               {/* <img className="logo mt-3" src={logo} alt="KidzeeLogo" /> */}

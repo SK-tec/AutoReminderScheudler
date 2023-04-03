@@ -42,7 +42,7 @@ const Footer = () => {
                 </div>
             </div>
         </div> */}
-      <Container fluid className="footer mt-5">
+      <Container fluid className="footer ">
         <Container >
         <Row   xs={2} md={4} >
           <Col className="footer-col mt-4">

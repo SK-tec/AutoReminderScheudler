@@ -4,7 +4,7 @@ import Girl from "../images/girl.jpeg";
 
 const Achivements = () => {
   return (
-    <Container id="achievements" className="mt-5">
+    <Container id="achievements" className="mt-5 mb-5">
       <h1>Achievements</h1>
       <Row xs={2} lg={4}>
         <Col>
