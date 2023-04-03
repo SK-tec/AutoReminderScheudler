@@ -6,7 +6,6 @@ import { Row, Col, Button, Card } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
 
 export const UpdateForm = ({ id }) => {
-  const [student, setStudent] = useState({});
   //const { id } = useParams();
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
@@ -17,6 +16,7 @@ export const UpdateForm = ({ id }) => {
   const [message, setMessage] = useState("");
 
   const handleChange = (e) => {
+    //console.log(e.target.name);
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
@@ -28,8 +28,8 @@ export const UpdateForm = ({ id }) => {
     axios
       .get(`/api/students/${id}`)
       .then((res) => {
-        setStudent(res.data);
-        console.log(student);
+        setForm(res.data);
+        console.log(res.data.dueDate);
       }, [])
       .catch((e) => console.log(e));
     handleShow();
@@ -74,14 +74,14 @@ export const UpdateForm = ({ id }) => {
             <Card.Text className="personal-info">
               <Row className="mb-3">
                 <Form.Group as={Col} md="6" className=" mt-3">
-                  <Form.Label>First name: {student.firstName}</Form.Label>
+                  <Form.Label>First name: </Form.Label>
                   <Form.Control
                     required
                     type="text"
                     placeholder="First name"
                     className="w-75 mx-auto mt-2"
                     name="firstName"
-                    value={student.firstName}
+                    value={form.firstName}
                     readOnly
                   />
                 </Form.Group>
@@ -93,7 +93,7 @@ export const UpdateForm = ({ id }) => {
                     placeholder="Last name"
                     className="w-75 mx-auto mt-2"
                     name="lastName"
-                    value={student.lastName}
+                    value={form.lastName}
                     readOnly
                   />
                 </Form.Group>
@@ -108,7 +108,7 @@ export const UpdateForm = ({ id }) => {
                     placeholder="Email Id"
                     className="w-75 mx-auto mt-2"
                     name="email"
-                    value={student.email}
+                    value={form.email}
                     readOnly
                   />
                 </Form.Group>
@@ -119,10 +119,9 @@ export const UpdateForm = ({ id }) => {
                     className="w-75 mx-auto mt-2"
                     type="text"
                     name="class_name"
-                    value={student.class_name}
+                    value={form.class_name}
                     readOnly
-                  >
-                  </Form.Control>
+                  ></Form.Control>
                 </Form.Group>
               </Row>
 
@@ -136,6 +135,7 @@ export const UpdateForm = ({ id }) => {
                       type="text"
                       placeholder="Remaining Fee"
                       name="dueFee"
+                      value={form.dueFee}
                       onChange={handleChange}
                     />
                   </Col>
@@ -148,6 +148,7 @@ export const UpdateForm = ({ id }) => {
                       type="date"
                       placeholder="Due date"
                       name="dueDate"
+                      value={form.dueDate}
                       onChange={handleChange}
                     />
                   </Col>
