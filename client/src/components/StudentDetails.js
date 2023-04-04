@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "../axiosInstance";
-import { Table } from "./Table";
 import FeeUpdateForm from "./FeeUpdateForm";
+import StudentInfo from "./StudentInfo";
 
 const StudentDetails = ({ data }) => {
   const [studentData, setStudentData] = useState([]);
@@ -32,7 +32,7 @@ const StudentDetails = ({ data }) => {
 
   return (
     <>
-      <Table data={studentData} column={column} />
+      <StudentInfo data={studentData} column={column}/>
       
     </>
   );
