@@ -45,11 +45,13 @@ export const UpdateForm = ({ id }) => {
 
           handleShow();
           handleReset();
+          handleClose();
           navigate(`/admin`);
         })
         .catch((err) => {
           setMessage("Input Data Error");
           handleShow();
+          handleClose();
           console.log(err);
         });
     }
@@ -160,14 +162,13 @@ export const UpdateForm = ({ id }) => {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
+          
           <Button variant="primary" onClick={handleSave}>
             Save
           </Button>
         </Modal.Footer>
       </Modal>
+      
     </div>
   );
 };
