@@ -20,7 +20,9 @@
 }
 #carousel{
   height:auto;
+  
 }
+
 
 /************* Navbar end ***********************/
 
@@ -38,9 +40,9 @@
 
 .ListGroup{
   background-color: rgb(248, 239, 228);
-  padding-left: 10px;
-  padding-right: 10px;
-  object-fit: cover;
+ padding-left: 10px;
+ padding-right: 10px;
+ object-fit: cover;
 
 }
 .ListGroup.Item{
@@ -72,13 +74,13 @@
 }
 /************* achivements end ***********************/
 .sideNav{
+  position: relative;
   height: auto;
   padding-top: 0;
   padding-bottom: 0;
   margin-top:0;
   margin-bottom: 0;
 }
-
 #sidebar{
   margin: 0;
   display: flex;
@@ -91,7 +93,12 @@
   padding-top: 0;
   padding-bottom: 0;
   color: yellow;
+  
 }
+
+
+
+
 
 #sidebar span{
   font-size: 1rem;
@@ -105,36 +112,32 @@ li{
   font-family: 'Poppins', sans-serif;
 }
 
-#Enquiry{
-  display: flex;
-  flex-direction: column;
-  margin-top: 3.5rem;
-  margin-bottom: 3.5rem;
-}
-
 /************* footer start ***********************/
 
 .footer {
   background-color:#428b87;
   color: white;
+ 
 }
-
 .footer-col h4{
   color:yellow;
 }
 .footer-col {
   text-align: left;
   font-family: "Poppins", sans-serif;
+  
 }
 
 .row-footer h4 {
   font-size: 1.1rem;
+ 
 }
 
 .container-footer-left {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .social-icons {

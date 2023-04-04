@@ -188,7 +188,7 @@ export const UpdateForm = ({ id }) => {
           </Button>
         </Modal.Footer>
       </Modal>
-      <Modal open={open} onHide={ handleOpen} animation={false}>
+      <Modal open={open} onHide={ handleShut} animation={false}>
           <Modal.Header closeButton>
             <Modal.Title>Message</Modal.Title>
           </Modal.Header>
