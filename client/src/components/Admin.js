@@ -8,12 +8,16 @@ import RegisterForm from "./RegisterForm";
 import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
 import StudentDetails from "./StudentDetails";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const Admin = () => {
   return (
-    <div className="container-fluid sideNav">
-      <div className="row">
-        <div id="sidebar" className="col-auto  bg-[#649632]">
+    <>
+    <Container fluid className="sideNav">
+      <Row>
+        <Col xs={1} md={1} id="sidebar" className="col-auto  bg-[#649632]">
           <LinkContainer to="/">
             <Navbar.Brand href="#home">
               {/* <img className="logo mt-3" src={logo} alt="KidzeeLogo" /> */}
@@ -53,9 +57,10 @@ const Admin = () => {
               </LinkContainer>
             </li>
           </ul>
-        </div>
-        <div id="tabs" className="col">
-          <div style={{ display: "block", width: 1000, padding: 30 }}>
+          
+        </Col>
+        <Col xs={11} id="tabs" className="col">
+          <div style={{ display: "block", padding: 30 }}>
             <Tabs defaultActiveKey="second">
               <Tab eventKey="first" title="Register">
                 <RegisterForm />
@@ -71,6 +76,12 @@ const Admin = () => {
               </Tab>
             </Tabs>
           </div>
+        </Col>
+      </Row>
+  </Container>
+    </> 
+  );
+};
           {/* <Nav variant="tabs" defaultActiveKey="/">
             <Nav.Item>
               <Nav.Link className="text-dark" eventKey={<RegisterForm />}>
@@ -90,10 +101,6 @@ const Admin = () => {
               </Nav.Link>
             </Nav.Item>
           </Nav> */}
-        </div>
-      </div>
-    </div>
-  );
-};
+        
 
 export default Admin;
