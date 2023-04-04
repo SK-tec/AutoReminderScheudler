@@ -25,18 +25,18 @@ const Contact = () => {
   };
   return (
     <>
-      <Container id="Enquiry" className="mt-4 w-50 ">
-        <Card.Title className="bg-warning text-center p-2">
+      <Container id="Enquiry" className="w-50 text-center">
+        <Card.Title className="text-center p-3">
           Enquiry Form
         </Card.Title>
 
         <Card.Text className="enquiry-form">
           <Form onSubmit={handleSubmit}>
-            <Form.Group as={Row} className="mb-3 pt-3">
+            <Form.Group as={Row} className="mb-4 pt-3">
               <Form.Label column sm={2}>
                 Name
               </Form.Label>
-              <Col sm={6}>
+              <Col sm={9}>
                 <Form.Control
                   type="text"
                   placeholder="First Name LastName"
@@ -48,13 +48,13 @@ const Contact = () => {
 
             <Form.Group
               as={Row}
-              className="mb-3 "
+              className="mb-4 "
               controlId="formHorizontalMother"
             >
               <Form.Label column sm={2}>
                 Email
               </Form.Label>
-              <Col sm={6}>
+              <Col sm={9}>
                 <Form.Control
                   type="Email"
                   placeholder="Email"
@@ -65,13 +65,13 @@ const Contact = () => {
             </Form.Group>
             <Form.Group
               as={Row}
-              className="mb-3 "
+              className="mb-4"
               controlId="formHorizontalMother"
             >
               <Form.Label column sm={2}>
                 Phone
               </Form.Label>
-              <Col sm={6}>
+              <Col sm={9}>
                 <Form.Control
                   type="text"
                   placeholder="Phone Number"
@@ -82,7 +82,7 @@ const Contact = () => {
             </Form.Group>
             <Form.Group
               as={Row}
-              className="mb-3 "
+              className="mb-4"
               controlId="formHorizontalMother"
             >
               <Form.Label column sm={2}>
@@ -98,7 +98,7 @@ const Contact = () => {
                 />
               </Col>
             </Form.Group>
-            <Button type="submit" className="mt-1 mb-3">
+            <Button type="submit" className="mt-2 mb-4">
               Submit
             </Button>
           </Form>

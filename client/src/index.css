@@ -20,9 +20,7 @@
 }
 #carousel{
   height:auto;
-  
 }
-
 
 /************* Navbar end ***********************/
 
@@ -40,9 +38,9 @@
 
 .ListGroup{
   background-color: rgb(248, 239, 228);
- padding-left: 10px;
- padding-right: 10px;
- object-fit: cover;
+  padding-left: 10px;
+  padding-right: 10px;
+  object-fit: cover;
 
 }
 .ListGroup.Item{
@@ -107,32 +105,36 @@ li{
   font-family: 'Poppins', sans-serif;
 }
 
+#Enquiry{
+  display: flex;
+  flex-direction: column;
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
 /************* footer start ***********************/
 
 .footer {
   background-color:#428b87;
   color: white;
- 
 }
+
 .footer-col h4{
   color:yellow;
 }
 .footer-col {
   text-align: left;
   font-family: "Poppins", sans-serif;
-  
 }
 
 .row-footer h4 {
   font-size: 1.1rem;
- 
 }
 
 .container-footer-left {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: center;
 }
 
 .social-icons {
