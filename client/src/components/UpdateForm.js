@@ -5,12 +5,19 @@ import Form from "react-bootstrap/Form";
 import { Row, Col, Button, Card } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
 import moment from "moment";
+import UpdateModal from "./UpdateModal";
+
 
 export const UpdateForm = ({ id }) => {
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const [open, setOpen] = useState(false);
+  const handleShut = () => setOpen(false);
+  const handleOpen = () => setOpen(true);
+  
   const [form, setForm] = useState({});
   const formRef = useRef(null);
   const [message, setMessage] = useState("");
@@ -20,8 +27,8 @@ export const UpdateForm = ({ id }) => {
     setForm({ ...form, [name]: value });
   };
 
-  const handleClick = (e) => {
-    e.preventDefault();
+  const handleFetch = (e) => {
+    
     axios
       .get(`/api/students/${id}`)
       .then((res) => {
@@ -29,11 +36,20 @@ export const UpdateForm = ({ id }) => {
         console.log(res.data);
       })
       .catch((e) => console.log(e));
+   
+  };
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    handleFetch();
     handleShow();
   };
   const handleReset = () => {
     formRef.current.reset();
   };
+
+  
+
   const handleSave = (e) => {
     e.preventDefault();
     if (id) {
@@ -46,12 +62,16 @@ export const UpdateForm = ({ id }) => {
           handleShow();
           handleReset();
           handleClose();
+          handleOpen();
+          
           navigate(`/admin`);
         })
         .catch((err) => {
           setMessage("Input Data Error");
           handleShow();
           handleClose();
+          handleOpen();
+          
           console.log(err);
         });
     }
@@ -168,6 +188,17 @@ export const UpdateForm = ({ id }) => {
           </Button>
         </Modal.Footer>
       </Modal>
+      <Modal open={open} onHide={ handleOpen} animation={false}>
+          <Modal.Header closeButton>
+            <Modal.Title>Message</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>{message}</Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleShut}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
       
     </div>
   );
