@@ -1,9 +1,9 @@
 import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import pool from "../images/pool.png";
-import playarea from "../images/playarea.png";
-import basketball from "../images/basketball.png";
+import ame from "../images/ame.jpg";
+import libary from "../images/libary.jpg";
+import playground from "../images/playground.jpg";
 import samatha from "../images/Samatha.png";
 import tejasvi from "../images/Tejasvi.JPG";
 import ershia from "../images/Ershia.jpg";
@@ -47,10 +47,10 @@ const About = () => {
           families, their peers and through their deep bonds of friendship.
         </p>
       </div>
-      <Container className="mt-3 mb-4 text-justify grid px-10 ">
+      <Container className="cont-g mt-3 mb-4 text-justify grid px-10 ">
         <Row>
           <Col sm={4}>
-            <img src={pool} alt="pool" />
+            <img src={ame} alt="ame" />
           </Col>
           <Col sm={4}>
             <div>
@@ -60,7 +60,7 @@ const About = () => {
             </div>
           </Col>
           <Col sm={4}>
-            <img src={playarea} alt="playarea" />
+            <img src={libary} alt="libary" />
           </Col>
         </Row>
         <Row>
@@ -70,7 +70,7 @@ const About = () => {
             </h5>
           </Col>
           <Col sm={4}>
-            <img src={basketball} alt="basketball" />
+            <img src={playground} alt="playground" />
           </Col>
           <Col sm={4}>
             <h5 style={{ color: "navy" }} className=" text-center ">
