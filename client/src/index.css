@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,200;1,400;1,500;1,600&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&family=Oswald:wght@200;300;400;500;600;700&family=Playfair+Display:wght@900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300&display=swap");
 
 /************* Navbar start ***********************/
-.Navbar{
-  font-family: 'Poppins', sans-serif;
+.Navbar {
+  font-family: "Poppins", sans-serif;
   background-color: #428b87;
   color: yellow;
 }
@@ -13,108 +13,100 @@
   gap: 10px;
   margin-left: 3rem;
 }
-#responsive-navbar-nav .navLink{
- margin-left: 3rem;
- margin-right: 5rem;
- color: yellow;
+#responsive-navbar-nav .navLink {
+  margin-left: 3rem;
+  margin-right: 5rem;
+  color: yellow;
 }
-#carousel img{
- 
+#carousel img {
   height: 80vh;
 }
-
 
 /************* Navbar end ***********************/
 
 /************* About start ***********************/
-.about{
-  
-  display:flex;
+.about {
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  margin:20px;
-  padding:20px;
+  margin: 20px;
+  padding: 20px;
   background-color: rgb(241, 237, 231);
-  font-size:large;
-  }
+  font-size: large;
+}
+.about p {
+  text-align: justify;
+}
 
-.grid{
-  display:flex;
+.grid {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0;
   padding: 0;
   background-color: rgb(43, 137, 76);
-  font-size:large;
-  
+  font-size: large;
 }
-h5{
+h5 {
   display: flex;
-  flex-direction:column;
-  align-items:center;
-  margin-top:10px;
-  
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
 }
-.team{
+.team {
   background-color: rgb(241, 237, 231);
-  margin:20px;
+  margin: 20px;
 }
 /************* About end ***********************/
 
 /************* Notice start ***********************/
-#notice{ 
+#notice {
   display: flex;
   background-color: rgb(241, 237, 231);
   flex-direction: column;
   align-items: center;
   background-size: cover;
   object-fit: cover;
-  margin:0;
-  padding: 0; 
+  margin: 0;
+  padding: 0;
   max-width: 100%;
-  }
+}
 
-#noticeImg{
-  background-image: url('./images/unsplash.jpg');
+#noticeImg {
+  background-image: url("./images/unsplash.jpg");
   display: flex;
-  margin:0;
-  padding: 0;   
-  
+  margin: 0;
+  padding: 0;
+
   opacity: 0.6;
 }
 
-#Enquiry{
+#Enquiry {
   background-color: rgb(248, 239, 228);
   display: flex;
-  
-  
-  
 }
 
-.ListGroup{
+.ListGroup {
   background-color: rgb(248, 239, 228);
- height: 100%;
- object-fit: cover;
-
-}
-.ListGroup.Item{
+  height: 100%;
   object-fit: cover;
-  
+}
+.ListGroup.Item {
+  object-fit: cover;
 }
 /************* notice end ***********************/
 
 /************* achivements starts ***********************/
-#achievements{
+#achievements {
   background-color: #428b87;
-  color:darkblue;
+  color: darkblue;
 }
-#achievements h1{
+#achievements h1 {
   color: #ffffff;
 }
-#achievements img{
+#achievements img {
   max-width: 100%;
   height: 16vw;
- 
 }
 #achievements .card img {
   border: 2px solid #ffffff;
@@ -126,64 +118,56 @@ h5{
   transform: scale(1.03);
 }
 /************* achivements end ***********************/
-.sideNav{
+.sideNav {
   position: relative;
   height: auto;
   padding-top: 0;
   padding-bottom: 0;
-  margin-top:0;
+  margin-top: 0;
   margin-bottom: 0;
 }
-#sidebar{
+#sidebar {
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items:center;
-  font-family: 'Poppins', sans-serif;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
   background-color: #428b87;
   padding-right: 2em;
   padding-left: 0;
   padding-top: 0;
   padding-bottom: 0;
   color: yellow;
-  
 }
 
-
-
-
-
-#sidebar span{
+#sidebar span {
   font-size: 1rem;
 }
 
-li{
+li {
   list-style: none;
 }
 
-#tabs{
-  font-family: 'Poppins', sans-serif;
+#tabs {
+  font-family: "Poppins", sans-serif;
 }
 
 /************* footer start ***********************/
 
 .footer {
-  background-color:#428b87;
+  background-color: #428b87;
   color: white;
- 
 }
-.footer-col h4{
-  color:yellow;
+.footer-col h4 {
+  color: yellow;
 }
 .footer-col {
   text-align: left;
   font-family: "Poppins", sans-serif;
-  
 }
 
 .row-footer h4 {
   font-size: 1.1rem;
- 
 }
 
 .container-footer-left {
@@ -237,17 +221,19 @@ li{
   background-color: rgb(247, 242, 237);
   margin: 0 auto;
   max-width: 500px;
-  
+
   padding-left: 35px;
   padding-right: 35px;
 }
-#signin h4{color:darkblue}
+#signin h4 {
+  color: darkblue;
+}
 #signin button {
   background: darkblue;
 }
-#singin-form{
+#singin-form {
   padding-left: 30px;
-  padding-right: 30px;  
+  padding-right: 30px;
 }
 #logout {
   color: yellow;
@@ -255,4 +241,3 @@ li{
   border: none;
 }
 /*Sign In ends*/
-
