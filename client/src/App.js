@@ -8,8 +8,9 @@ import Signin from "./components/Signin";
 import { Routes, Route } from "react-router-dom";
 import Admin from "./components/Admin";
 import Contact from "./components/Contact";
-
 import { useState } from "react";
+import About from "./components/About";
+
 function App() {
   const [isLoggedin, setIsLoggedin] = useState(false);
   return (
@@ -20,6 +21,7 @@ function App() {
         {/* <Route path="/aboutus" element={<AboutUs />} />*/}
         <Route path="/contact" element={<Contact />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/about" element={<About />} />
         <Route
           path="/signin"
           element={<Signin setIsLoggedin={setIsLoggedin} />}

@@ -5,147 +5,119 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
+import unsplash from "../images/unsplash.jpg";
 
 function Notices() {
   return (
-    <Container id="notice" className=" d-flex flex-wrap">
-      {/* <Container id="Enquiry" className="mt-4 w-50 ">
-        <Card.Title className="bg-warning text-center p-2">
-          Enquiry Form
-        </Card.Title>
-
-        <Card.Text className="enquiry-form">
-          <Form.Group
-            as={Row}
-            className="mb-3 pt-3"
-            controlId="formHorizontalFather"
-          >
-            <Form.Label column sm={2}>
-              Name
-            </Form.Label>
-            <Col sm={4}>
-              <Form.Control type="text" placeholder="First Name" />
-            </Col>
-            <Col sm={4}>
-              <Form.Control type="text" placeholder="Last Name" />
-            </Col>
-          </Form.Group>
-
-          <Form.Group
-            as={Row}
-            className="mb-3 "
-            controlId="formHorizontalMother"
-          >
-            <Form.Label column sm={2}>
-              Email
-            </Form.Label>
-            <Col sm={5}>
-              <Form.Control type="Email" placeholder="Email" />
-            </Col>
-          </Form.Group>
-          <Form.Group
-            as={Row}
-            className="mb-3 "
-            controlId="formHorizontalMother"
-          >
-            <Form.Label column sm={2}>
-              Phone
-            </Form.Label>
-            <Col sm={5}>
-              <Form.Control type="text" placeholder="Phone Number" />
-            </Col>
-          </Form.Group>
-          <Form.Group
-            as={Row}
-            className="mb-3 "
-            controlId="formHorizontalMother"
-          >
-            <Form.Label column sm={2}>
-              Query
-            </Form.Label>
-            <Col sm={9}>
-              <Form.Control
-                as="textarea"
-                rows={3}
-                placeholder="Ask your question..."
-              />
-            </Col>
-          </Form.Group>
-          <Button type="submit" className="mt-1 mb-3">
-            Submit
-          </Button>
-        </Card.Text>
-      </Container> */}
-      <h2 style={{ color: "navy" }} className="mt-5">
+    <>
+    <h2 style={{ color: "navy" }} className="mt-5 text-center">
         Welcome To Kidzee
       </h2>
-
-      <Container id="Enquiry" className="mt-4 w-75 ">
+    <Container fluid id="notice" className=" d-flex mt-4 ">
+    
+      <Row fluid className="mx-0 px-0 w-100 ">
+        <Col sm={5} id="Enquiry" className=" p-0 m-0">
+        <img id="noticeImg" className="w-100 "  as={Row} src={unsplash} alt="notice" />
+          
+        </Col>
+        <Col sm={7}  className=" p-0 m-0 ">
+        <ListGroup as="ol" className="w-100 "    numbered>
         <lable>
-          <Card.Title className="bg-warning text-center p-2 ">
+          <Card.Title className="bg-warning text-center py-4 px-0">
             Notice
           </Card.Title>
         </lable>
-        <ListGroup as="ol" className="px-4" variant="flush" numbered>
-          <ListGroup.Item
-            as="li"
-            className="d-flex bg-transparent    align-items-start"
-          >
-            <Container className="ms-2 text-start  me-auto">
-              <Container className="fw-bold">School reopens</Container>
-              we welcome all students in new classes!
-            </Container>
-            <Col sm={3}>
-              <Badge bg="success" pill>
-                14/06/2023
-              </Badge>
-            </Col>
-          </ListGroup.Item>
-          <ListGroup.Item
-            as="li"
-            className="d-flex bg-transparent   align-items-start"
-          >
-            <Container className="ms-2 text-start me-auto">
-              <Container className="fw-bold">1st Semester Exam</Container>
-              Midterm 100 marks Exams will take place
-            </Container>
-            <Col sm={3}>
-              <Badge bg="success" pill>
-                10/09/2023
-              </Badge>
-            </Col>
-          </ListGroup.Item>
-          <ListGroup.Item
-            as="li"
-            className="d-flex bg-transparent  align-items-start"
-          >
-            <Container className="ms-2 text-start me-auto">
-              <Container className="fw-bold">Annual function</Container>
-              Prize Distribution and Cultural Program
-            </Container>
-            <Col sm={3}>
-              <Badge bg="success" pill>
-                12/12/2023
-              </Badge>
-            </Col>
-          </ListGroup.Item>
-          <ListGroup.Item
-            as="li"
-            className="d-flex bg-transparent   align-items-start"
-          >
-            <Container className="ms-2 text-start me-auto pb-4">
-              <Container className="fw-bold ">Sports week</Container>
-              Annual Sports Competition
-            </Container>
-            <Col sm={3}>
-              <Badge bg="success" pill>
-                12/12/2023
-              </Badge>
-            </Col>
-          </ListGroup.Item>
-        </ListGroup>
-      </Container>
+        
+      <ListGroup.Item
+        as="li"
+        className="d-flex justify-content-between align-items-start"
+      >
+        <div className="ms-2 me-auto">
+          <div className="fw-bold">School reopens</div>
+          we welcome all students in new classes!
+        </div>
+        <Badge bg="primary" pill>
+        14/06/2023
+        </Badge>
+      </ListGroup.Item>
+      <ListGroup.Item
+        as="li"
+        className="d-flex justify-content-between align-items-start"
+      >
+        <div className="ms-2 me-auto">
+          <div className="fw-bold">School reopens</div>
+          we welcome all students in new classes!
+        </div>
+        <Badge bg="primary" pill>
+        14/06/2023
+        </Badge>
+      </ListGroup.Item>
+      <ListGroup.Item
+        as="li"
+        className="d-flex justify-content-between align-items-start"
+      >
+        <div className="ms-2 me-auto">
+          <div className="fw-bold">1st Semester Exam</div>
+          Midterm 100 marks Exams will take place
+        </div>
+        <Badge bg="primary" pill>
+        10/09/2023
+        </Badge>
+      </ListGroup.Item>
+      <ListGroup.Item
+        as="li"
+        className="d-flex justify-content-between align-items-start"
+      >
+        <div className="ms-2 me-auto">
+          <div className="fw-bold">Annual function</div>
+          Prize Distribution and Cultural Program
+        </div>
+        <Badge bg="primary" pill>
+        12/12/2023
+        </Badge>
+      </ListGroup.Item>
+      <ListGroup.Item
+        as="li"
+        className="d-flex justify-content-between align-items-start"
+      >
+        <div className="ms-2 me-auto">
+          <div className="fw-bold">Sports week</div>
+          Annual Sports Competition
+        </div>
+        <Badge bg="primary" pill>
+        12/01/2024
+        </Badge>
+      </ListGroup.Item>
+      <ListGroup.Item
+        as="li"
+        className="d-flex justify-content-between align-items-start"
+      >
+        <div className="ms-2 me-auto">
+          <div className="fw-bold">Sports week</div>
+          Annual Sports Competition
+        </div>
+        <Badge bg="primary" pill>
+        12/01/2024
+        </Badge>
+      </ListGroup.Item>
+      <ListGroup.Item
+        as="li"
+        className="d-flex justify-content-between align-items-start"
+      >
+        <div className="ms-2 me-auto">
+          <div className="fw-bold">Sports week</div>
+          Annual Sports Competition
+        </div>
+        <Badge bg="primary" pill>
+        12/01/2024
+        </Badge>
+      </ListGroup.Item>
+    </ListGroup>
+        </Col>
+      </Row>
+      
     </Container>
+    </>
   );
 }
 

@@ -18,33 +18,88 @@
  margin-right: 5rem;
  color: yellow;
 }
-#carousel{
-  height:auto;
+#carousel img{
+ 
+  height: 80vh;
 }
 
+
 /************* Navbar end ***********************/
+
+/************* About start ***********************/
+.about{
+  
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin:20px;
+  padding:20px;
+  background-color: rgb(241, 237, 231);
+  font-size:large;
+  }
+
+.grid{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(43, 137, 76);
+  font-size:large;
+  
+}
+h5{
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:10px;
+  
+}
+.team{
+  background-color: rgb(241, 237, 231);
+  margin:20px;
+}
+/************* About end ***********************/
 
 /************* Notice start ***********************/
 #notice{ 
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  background-color: rgb(241, 237, 231);
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  object-fit: cover;
+  margin:0;
+  padding: 0; 
+  max-width: 100%;
   }
+
+#noticeImg{
+  background-image: url('./images/unsplash.jpg');
+  display: flex;
+  margin:0;
+  padding: 0;   
+  
+  opacity: 0.6;
+}
 
 #Enquiry{
   background-color: rgb(248, 239, 228);
-  border:10px solid white;
+  display: flex;
+  
+  
+  
 }
 
 .ListGroup{
   background-color: rgb(248, 239, 228);
-  padding-left: 10px;
-  padding-right: 10px;
-  object-fit: cover;
+ height: 100%;
+ object-fit: cover;
 
 }
 .ListGroup.Item{
   object-fit: cover;
+  
 }
 /************* notice end ***********************/
 
@@ -72,13 +127,13 @@
 }
 /************* achivements end ***********************/
 .sideNav{
+  position: relative;
   height: auto;
   padding-top: 0;
   padding-bottom: 0;
   margin-top:0;
   margin-bottom: 0;
 }
-
 #sidebar{
   margin: 0;
   display: flex;
@@ -91,7 +146,12 @@
   padding-top: 0;
   padding-bottom: 0;
   color: yellow;
+  
 }
+
+
+
+
 
 #sidebar span{
   font-size: 1rem;
@@ -105,36 +165,32 @@ li{
   font-family: 'Poppins', sans-serif;
 }
 
-#Enquiry{
-  display: flex;
-  flex-direction: column;
-  margin-top: 3.5rem;
-  margin-bottom: 3.5rem;
-}
-
 /************* footer start ***********************/
 
 .footer {
   background-color:#428b87;
   color: white;
+ 
 }
-
 .footer-col h4{
   color:yellow;
 }
 .footer-col {
   text-align: left;
   font-family: "Poppins", sans-serif;
+  
 }
 
 .row-footer h4 {
   font-size: 1.1rem;
+ 
 }
 
 .container-footer-left {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .social-icons {
