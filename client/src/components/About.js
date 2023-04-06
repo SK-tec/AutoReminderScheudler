@@ -2,8 +2,9 @@ import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ame from "../images/ame.jpg";
-import libary from "../images/libary.jpg";
+import schoolbus from "../images/schoolbus.jpg";
 import playground from "../images/playground.jpg";
+import computer from "../images/computer.jpg";
 import samatha from "../images/Samatha.png";
 import tejasvi from "../images/Tejasvi.JPG";
 import ershia from "../images/Ershia.jpg";
@@ -11,10 +12,10 @@ import ershia from "../images/Ershia.jpg";
 const About = () => {
   return (
     <>
-      <h2 style={{ color: "navy" }} className="mt-5 text-center">
+      <h2 id="about-heading" style={{ color: "navy" }} className="mt-5 text-center">
         WELCOME TO KIDZEE
       </h2>
-      <div className="mt-3 container text-justify about px-10 ">
+      <div className="mt-4 container text-justify about px-10 mb-5">
         <p>
           Kidzee's journey towards education excellence began in 2004 with an
           ideal mix of academic and corporate professionals who felt the shared
@@ -47,10 +48,11 @@ const About = () => {
           families, their peers and through their deep bonds of friendship.
         </p>
       </div>
-      <Container className="cont-g mt-3 mb-4 text-justify grid px-10 ">
+      {/*
+      <Container className="mt-3 mb-4 text-justify grid px-10 ">
         <Row>
           <Col sm={4}>
-            <img src={ame} alt="ame" />
+            <img src={ame} alt="ame"/>
           </Col>
           <Col sm={4}>
             <div>
@@ -60,7 +62,7 @@ const About = () => {
             </div>
           </Col>
           <Col sm={4}>
-            <img src={libary} alt="libary" />
+            <img src={schoolbus} alt="libary" />
           </Col>
         </Row>
         <Row>
@@ -70,7 +72,7 @@ const About = () => {
             </h5>
           </Col>
           <Col sm={4}>
-            <img src={playground} alt="playground" />
+            <img src={playground} alt="playground"/>
           </Col>
           <Col sm={4}>
             <h5 style={{ color: "navy" }} className=" text-center ">
@@ -78,6 +80,29 @@ const About = () => {
             </h5>
           </Col>
         </Row>
+  </Container>*/}
+
+      <Container id="con-about">
+            <Row className="row-about w-100">
+              <Col className="col-img col-img-1" xs={1} md={4}></Col>
+              <Col className="col-img col-img-2 d-flex align-items-center justify-content-center" xs={1} md={4}>Contempaorary Amenities</Col>
+              <Col className="col-img col-img-3" xs={1} md={4}></Col>
+            </Row>
+            <Row className="row-about w-100">
+              <Col className="col-img col-img-4 d-flex align-items-center justify-content-center" xs={1} md={4}><span>100%</span> Satisfied parents</Col>
+              <Col className="col-img col-img-5" xs={1} md={4}></Col>
+              <Col className="col-img col-img-6 d-flex align-items-center justify-content-center" xs={1} md={4}>Liberal arts <br></br>& sports tradition</Col>
+            </Row>
+            <Row className="row-about w-100">
+              <Col className="col-img col-img-7" xs={1} md={4}></Col>
+              <Col className="col-img col-img-8 d-flex align-items-center justify-content-center" xs={1} md={4}>Contempaorary Amenities</Col>
+              <Col className="col-img col-img-9" xs={1} md={4}></Col>
+            </Row>
+            <Row className="row-about w-100">
+              <Col className="col-img col-img-10 d-flex align-items-center justify-content-center" xs={1} md={4}>Contempaorary Amenities</Col>
+              <Col className="col-img col-img-11" xs={1} md={4}></Col>
+              <Col className="col-img col-img-12 d-flex align-items-center justify-content-center" xs={1} md={4}>Contempaorary Amenities</Col>
+            </Row>
       </Container>
 
       <Container className="mt-4 team justify-content-center">
