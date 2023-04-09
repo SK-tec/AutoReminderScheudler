@@ -66,8 +66,8 @@ const RegisterForm = () => {
   };
   return (
     <>
-      <Container className="register-form  mt-5 d-flex justify-content-center">
-        <Card border="secondary" className="w-75 ">
+      <Container className="register-form   mt-5 d-flex justify-content-center">
+        <Card border="secondary w-100">
           <Card.Header>
             {" "}
             <h2> Registration Form</h2>
@@ -169,7 +169,7 @@ const RegisterForm = () => {
             <Card.Title className="text-start p-3">Parents Info</Card.Title>
             <Card.Text className="parent-info">
               <Form.Group as={Row} className="mb-3 pt-3 ">
-                <Form.Label column xs={4} md={2}>
+                <Form.Label column md={3}>
                   Father Name
                 </Form.Label>
                 <Col sm={5}>
@@ -182,7 +182,7 @@ const RegisterForm = () => {
                 </Col>
               </Form.Group>
               <Form.Group as={Row} className="mb-3 mt-2 ">
-                <Form.Label column xs={4} md={2}>
+                <Form.Label column md={3}>
                   Mother Name
                 </Form.Label>
                 <Col sm={5}>
@@ -195,7 +195,7 @@ const RegisterForm = () => {
                 </Col>
               </Form.Group>
               <Form.Group as={Row} className="mb-3 mt-4">
-                <Form.Label column sm={2}>
+                <Form.Label column md={3}>
                   Email
                 </Form.Label>
                 <Col sm={5}>
@@ -208,7 +208,7 @@ const RegisterForm = () => {
                 </Col>
               </Form.Group>
               <Form.Group as={Row} className="mb-3 mt-3 pb-3">
-                <Form.Label column sm={2}>
+                <Form.Label column md={3}>
                   Phone
                 </Form.Label>
                 <Col sm={5}>
