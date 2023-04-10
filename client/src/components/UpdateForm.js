@@ -5,19 +5,15 @@ import Form from "react-bootstrap/Form";
 import { Row, Col, Button, Card } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
 import moment from "moment";
-import UpdateModal from "./UpdateModal";
 
-
-export const UpdateForm = ({ id }) => {
+export const UpdateForm = ({ id, setIsUpdated }) => {
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
-  const [open, setOpen] = useState(false);
-  const handleShut = () => setOpen(false);
-  const handleOpen = () => setOpen(true);
-  
+  const [status, setStaus] = useState(false);
+  const showMessage = () => setStaus(true);
+  const closeMessage = () => setStaus(false);
   const [form, setForm] = useState({});
   const formRef = useRef(null);
   const [message, setMessage] = useState("");
@@ -28,7 +24,6 @@ export const UpdateForm = ({ id }) => {
   };
 
   const handleFetch = (e) => {
-    
     axios
       .get(`/api/students/${id}`)
       .then((res) => {
@@ -36,7 +31,6 @@ export const UpdateForm = ({ id }) => {
         console.log(res.data);
       })
       .catch((e) => console.log(e));
-   
   };
 
   const handleClick = (e) => {
@@ -48,8 +42,6 @@ export const UpdateForm = ({ id }) => {
     formRef.current.reset();
   };
 
-  
-
   const handleSave = (e) => {
     e.preventDefault();
     if (id) {
@@ -57,32 +49,26 @@ export const UpdateForm = ({ id }) => {
         .put(`/api/students/${id}`, form)
         .then((res) => {
           setMessage("Data Updated successfully");
+          setIsUpdated(true);
+
           console.log(res);
 
-          handleShow();
           handleReset();
           handleClose();
-          handleOpen();
-          
+          showMessage();
           navigate(`/admin`);
         })
         .catch((err) => {
           setMessage("Input Data Error");
           handleShow();
           handleClose();
-          handleOpen();
-          
+          showMessage();
+
           console.log(err);
         });
     }
   };
 
-  const handleRemove = () => {
-    axios
-      .delete(`/api/students/${id}`)
-      .then((res) => navigate("/"))
-      .catch((e) => console.log(e));
-  };
   return (
     <div>
       <Button variant="link" onClick={handleClick}>
@@ -132,7 +118,7 @@ export const UpdateForm = ({ id }) => {
                     className="w-75 mx-auto mt-2"
                     name="email"
                     value={form.email}
-                    readOnly
+                    onChange={handleChange}
                   />
                 </Form.Group>
                 <Form.Group as={Col} md="6">
@@ -182,24 +168,29 @@ export const UpdateForm = ({ id }) => {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
           <Button variant="primary" onClick={handleSave}>
             Save
           </Button>
         </Modal.Footer>
       </Modal>
-      <Modal open={open} onHide={ handleShut} animation={false}>
-          <Modal.Header closeButton>
-            <Modal.Title>Message</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>{message}</Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleShut}>
-              Close
-            </Button>
-          </Modal.Footer>
-        </Modal>
-      
+      {/* <Button variant="primary" onClick={handleShow}>
+        OK
+      </Button> */}
+
+      <Modal show={status} onHide={closeMessage} animation={false}>
+        <Modal.Header closeButton>
+          <Modal.Title>Status</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{message}</Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={closeMessage}>
+            OK
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 };
