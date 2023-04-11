@@ -6,13 +6,14 @@ import schoolbus from "../images/schoolbus.jpg";
 import playground from "../images/playground.jpg";
 import computer from "../images/computer.jpg";
 import samatha from "../images/Samatha.png";
-import tejasvi from "../images/Tejasvi.JPG";
+import tejasvi from "../images/Tejasvi.png";
 import ershia from "../images/Ershia.jpg";
 
 const About = () => {
   return (
     <>
-      <h2 id="about-heading" style={{ color: "navy" }} className="mt-5 text-center">
+    <div className="eqbg pb-3">
+      <h2 id="about-heading" style={{ color: "navy" }} className="pt-5  text-center">
         WELCOME TO KIDZEE
       </h2>
       <div className="mt-4 container text-justify about px-10 mb-5">
@@ -112,12 +113,12 @@ const About = () => {
             {/* <svg className="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> */}
             <img
               src={samatha}
-              className="bd-placeholder-img rounded-circle mt-3"
+              className="bd-placeholder-img rounded-circle mt-3 "
               width="180"
               height="160"
               alt=""
             />
-            <h3>Samatha</h3>
+            <h3 className="mt-2">Samatha</h3>
             <p>
               Principal<br></br>India
             </p>
@@ -125,13 +126,13 @@ const About = () => {
           <div className="col-lg-3">
             <img
               src={ershia}
-              className="bd-placeholder-img rounded-circle mt-3"
+              className="bd-placeholder-img rounded-circle mt-3 "
               width="180"
               height="160"
               alt=""
             />
 
-            <h3>Ershia</h3>
+            <h3 className="mt-2">Ershia</h3>
             <p>
               Head of Administration Department<br></br>Iran
             </p>
@@ -139,19 +140,20 @@ const About = () => {
           <div className="col-lg-3">
             <img
               src={tejasvi}
-              className="bd-placeholder-img rounded-circle mt-3"
+              className="bd-placeholder-img rounded-circle mt-3 "
               width="180"
               height="160"
               alt=""
             />
 
-            <h3>Tejasvi</h3>
+            <h3 className="mt-2">Tejasvi</h3>
             <p>
               Supervisor <br></br>India
             </p>
           </div>
         </div>
       </Container>
+      </div>
     </>
   );
 };

@@ -53,23 +53,21 @@ const Admin = () => {
               </li>
             </ul>
           </Col>
-          <Col xs={11} id="tabs" className="col">
-            <div style={{ display: "block", padding: 20 }}>
-              <Tabs defaultActiveKey="second">
-                <Tab eventKey="first" title="Register">
-                  <RegisterForm />
-                </Tab>
-                <Tab eventKey="second" title="Fee">
-                  <StudentDetails />
-                </Tab>
-                <Tab eventKey="third" title="Attendance">
-                  Hii, I am Attendance tab and it's Underconstruction
-                </Tab>
-                <Tab eventKey="fourth" title="Others">
-                  Hii, Underconstruction
-                </Tab>
-              </Tabs>
-            </div>
+          <Col xs={11} id="tabs">
+            <Tabs defaultActiveKey="second" className="mb-3">
+              <Tab eventKey="first" title="Register">
+                <RegisterForm />
+              </Tab>
+              <Tab eventKey="second" title="Fee">
+                <StudentDetails />
+              </Tab>
+              {/* <Tab eventKey="third" title="Attendance">
+                Hii, I am Attendance tab and it's Underconstruction
+              </Tab> */}
+              <Tab eventKey="fourth" title="Others">
+                Hi, Attendance and other Features are Under Developement
+              </Tab>
+            </Tabs>
           </Col>
         </Row>
       </Container>
