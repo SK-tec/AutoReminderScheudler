@@ -40,12 +40,13 @@ const Contact = () => {
 
   return (
     <>
-      <Container className=" w-75 mt-5 mb-5 enquiry-form">
+    
+      <Container className=" w-75  mt-5 mb-5 enquiry-form">
         <Card className="text-center ">
           <Card.Header>
             <Card.Title>Enquiry Form</Card.Title>
           </Card.Header>
-          <Card.Body>
+          <Card.Body className="eqbg">
             <Form
               ref={formRef}
               onSubmit={handleSubmit}
