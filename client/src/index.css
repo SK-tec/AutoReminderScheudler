@@ -127,6 +127,9 @@ h5 {
 /************* About end ***********************/
 
 /************* Notice start ***********************/
+.noticeHeading{
+  background-color: rgb(241, 237, 231);
+}
 #notice {
   display: flex;
   background-color: rgb(241, 237, 231);
@@ -153,11 +156,15 @@ h5 {
   display: flex;
 } */
 /* Enquiry Form Starts*/
+.eqbg{
+  background-color: rgb(242, 241, 239);
+}
 .enquiry-form button {
   background-color: #428b87;
 }
 .enquiry-form {
   color: #347470;
+  
 }
 .enquiry-form .card-title {
   color: yellow;
