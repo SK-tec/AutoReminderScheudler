@@ -12,12 +12,10 @@ import ershia from "../images/Ershia.jpg";
 const About = () => {
   return (
     <>
-      <div className="eqbg pb-3">
-        <h2
+       <h2
           id="about-heading"
           style={{ color: "navy" }}
-          className="pt-5  text-center"
-        >
+          className="pt-5  text-center">
           WELCOME TO KIDZEE
         </h2>
         <div className="mt-4 container text-justify about px-10 mb-5">
@@ -195,7 +193,7 @@ const About = () => {
             </div>
           </div>
         </Container>
-      </div>
+      
     </>
   );
 };
