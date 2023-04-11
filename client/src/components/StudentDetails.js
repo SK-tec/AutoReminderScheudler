@@ -3,9 +3,10 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "../axiosInstance";
 import StudentInfo from "./StudentInfo";
 import Table from "react-bootstrap/Table";
-import { Button } from "react-bootstrap";
+
 import UpdateForm from "./UpdateForm";
 import moment from "moment";
+import DeleteStudent from "./DeleteStudent";
 
 const StudentDetails = () => {
   const [studentData, setStudentData] = useState([]);
@@ -84,9 +85,7 @@ const StudentDetails = () => {
                 <UpdateForm id={student._id} setIsUpdated={setIsUpdated} />
               </td>
               <td>
-                <Button variant="link" onClick={handleRemove}>
-                  <i className="bi bi-trash"></i>
-                </Button>
+                <DeleteStudent id={student._id} setIsUpdated={setIsUpdated} />
               </td>
             </tr>
           ))}
