@@ -1,4 +1,9 @@
+const cron = require("node-cron");
 const nodemailer = require("nodemailer");
+const Student = require("../models/student");
+
+const moment = require("moment");
+
 const contactEmail = nodemailer.createTransport({
   service: "gmail",
   host: "smtp.gmail.com",
@@ -29,8 +34,8 @@ const createEnquiry = async (req, res) => {
       to: "kidzee.wbs@gmail.com",
       subject: "Kidzee Enquiry",
       html: `<p>Name: ${name}</p>
-             <p>Email: ${email}</p>
-             <p>Message: ${message}</p>`,
+            <p>Email: ${email}</p>
+            <p>Message: ${message}</p>`,
     };
     contactEmail.sendMail(mail, (error) => {
       if (error) {
@@ -43,11 +48,69 @@ const createEnquiry = async (req, res) => {
     res.json(500).json({ message: error.message });
   }
 };
-const remainderMail = async (req, res) => {
+
+const feeInfo = async () => {
   try {
+    const dueFeeInfo = await Student.find({}, [
+      "dueDate",
+      "dueFee",
+      "installments",
+      "email",
+    ]);
+    const currentDate = moment(new Date()).format("MM/DD/YYYY");
+    const recipientList = [];
+    dueFeeInfo.map((record) => {
+      moment(record.dueDate).format("MM/DD/YYYY") == currentDate
+        ? recipientList.push(record.email)
+        : console.log("Date Not matched");
+    });
+    console.log(recipientList);
+    mailScheduler(recipientList, currentDate);
   } catch (error) {
-    res.json(500).json({ message: error.message });
+    console.log(error);
   }
 };
+const mailScheduler = (recipientList, dueDate) => {
+  console.log("mailScheduler Invoked");
+  //console.log("dueDate);
+  //const dueFee = record.dueFee;
+  //const dueDate = moment(record.dueDate).format("MM/DD/YYYY");
+  //const recipient = record.email;
+  const remainderMail = {
+    from: process.env.EMAIL_TEST,
+    to: recipientList,
+    subject: "Fee Reminder",
+    html: getHTMLTemplateString(dueDate),
+    attachments: [
+      {
+        filename: "Kidzee_logo.png",
+        path: __dirname + "/Kidzee_logo.png",
+        cid: "unique@logo",
+      },
+    ],
+  };
+  let task = cron.schedule(`* * * * * *`, () => {
+    console.log("schedule Invoked");
+    contactEmail.sendMail(remainderMail, function (err, info) {
+      if (err) console.log(err);
+      else console.log("Email sent successfully");
+    });
+  });
+  task.stop();
+};
 
-module.exports = { createEnquiry, remainderMail };
+feeInfo();
+
+function getHTMLTemplateString(dueDate) {
+  console.log(dueDate);
+  // add your css and html inside the string below
+  return `
+  <div style="background-color:bisque;color:darkblue;">
+    <h3>Dear Parents, It's a kind reminder for  your due Fee</h3>
+    <p>Your 1st installment ₹6000 rupuees is due by ${dueDate}.Please pay the Fee on or before Duedate!</p>
+    <h4>Thank you :)</h4>
+    <img  style="width:250px;" src="cid:unique@logo"/></div>
+    `;
+}
+
+module.exports = { createEnquiry };
