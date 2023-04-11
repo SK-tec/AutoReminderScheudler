@@ -1,6 +1,6 @@
 import axios from "../axiosInstance";
-import React, { useRef, useState, useEffect } from "react";
-import { useParams, useNavigate, Link } from "react-router-dom";
+import React, { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import { Row, Col, Button, Card } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
@@ -28,7 +28,6 @@ export const UpdateForm = ({ id, setIsUpdated }) => {
       .get(`/api/students/${id}`)
       .then((res) => {
         setForm(res.data);
-        console.log(res.data);
       })
       .catch((e) => console.log(e));
   };
@@ -50,8 +49,6 @@ export const UpdateForm = ({ id, setIsUpdated }) => {
         .then((res) => {
           setMessage("Data Updated successfully");
           setIsUpdated(true);
-
-          console.log(res);
 
           handleReset();
           handleClose();
