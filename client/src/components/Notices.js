@@ -13,7 +13,7 @@ function Notices() {
     <h2 style={{  fontFamily: "Rampart One", color: "navy" }} className="mt-5 mb-4 text-center shadow-5-strong">
         Welcome To Kidzee
       </h2>
-      <h4 style={{  color: "green" }}>Education – Your Door To The Future</h4>
+      <h4 style={{  color: "green" }}>Your Door To The Future</h4>
       <div className="container">
       <p style={{  color: "navy" }}>A learning community dedicated to building respectful and responsible citizens and 
         empowering all learners. Working collaboratively to ensure every student grows 
