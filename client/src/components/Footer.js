@@ -30,7 +30,7 @@ const Footer = () => {
             <h4>Contact Us</h4>
             <p>+91 6225 0098 12</p>
             <p>kidzee@kidzee.com</p>
-            <p>Mahatma Gandhi Road, Mumbai 40721, India</p>
+            <p>Mahatma Gandhi Road, 40721, India</p>
           </Col>
           <Col className="justify-content-center">
             <Row className="mt-4 mx-auto">

@@ -10,8 +10,8 @@ import unsplash from "../images/unsplash.jpg";
 function Notices() {
   return (
     <>
-    
-    <h2 style={{  fontFamily: "Rampart One", color: "navy" }} className="mt-4 mb-4  text-center shadow-5-strong">
+    <div className="noticeHeading p-4">
+    <h2 style={{  fontFamily: "Rampart One", color: "navy" }} className="mb-4  text-center shadow-5-strong">
         Welcome To Kidzee
       </h2>
       <h4 style={{  color: "green" }}>Your Door To The Future</h4>
@@ -21,16 +21,16 @@ function Notices() {
         academically, socially, and emotionally. We teach, model, and encourage a love of 
         learning, collaboration, and compassion for others.</p>
         </div>
-        
-    <Container id="notice" className=" d-flex w-80">
+        </div>
+    <Container fluid id="notice" className=" d-flex ">
     
-      <Row  className="mx-0 px-7  ">
+      <Row fluid className="mx-0 px-0 w-100 ">
         <Col sm={5} id="Enquiry" className=" p-0 m-0">
-        <img id="noticeImg" className="w-100 h-100"  as={Row} src={unsplash} alt="notice" />
+        <img id="noticeImg" className="w-100 "  as={Row} src={unsplash} alt="notice" />
           
         </Col>
         <Col sm={7}  className=" p-0 m-0 ">
-        <ListGroup as="ol" className="w-100 "    >
+        <ListGroup as="ol" className="w-100 "    numbered>
         <lable>
           <Card.Title className="bg-warning text-center py-4 px-0">
           <i class="bi bi-stars"></i> Upcoming Events <i class="bi bi-stars"></i> 
@@ -39,7 +39,7 @@ function Notices() {
         
       <ListGroup.Item
         as="li"
-        className="d-flex justify-content-between align-items-start text-start"
+        className="d-flex justify-content-between align-items-start"
       >
         <div className="ms-2 me-auto">
           <div className="fw-bold">School reopens</div>
@@ -51,7 +51,7 @@ function Notices() {
       </ListGroup.Item>
       <ListGroup.Item
         as="li"
-        className="d-flex justify-content-between align-items-start text-start"
+        className="d-flex justify-content-between align-items-start"
       >
         <div className="ms-2 me-auto">
           <div className="fw-bold">School reopens</div>
@@ -63,7 +63,7 @@ function Notices() {
       </ListGroup.Item>
       <ListGroup.Item
         as="li"
-        className="d-flex justify-content-between align-items-start text-start"
+        className="d-flex justify-content-between align-items-start"
       >
         <div className="ms-2 me-auto">
           <div className="fw-bold">1st Semester Exam</div>
@@ -75,7 +75,7 @@ function Notices() {
       </ListGroup.Item>
       <ListGroup.Item
         as="li"
-        className="d-flex justify-content-between align-items-start text-start"
+        className="d-flex justify-content-between align-items-start"
       >
         <div className="ms-2 me-auto">
           <div className="fw-bold">Annual function</div>
@@ -87,7 +87,7 @@ function Notices() {
       </ListGroup.Item>
       <ListGroup.Item
         as="li"
-        className="d-flex justify-content-between align-items-start text-start"
+        className="d-flex justify-content-between align-items-start"
       >
         <div className="ms-2 me-auto">
           <div className="fw-bold">Sports week</div>
@@ -97,8 +97,30 @@ function Notices() {
         12/01/2024
         </Badge>
       </ListGroup.Item>
-      
-      
+      <ListGroup.Item
+        as="li"
+        className="d-flex justify-content-between align-items-start"
+      >
+        <div className="ms-2 me-auto">
+          <div className="fw-bold">Sports week</div>
+          Annual Sports Competition
+        </div>
+        <Badge bg="primary" pill>
+        12/01/2024
+        </Badge>
+      </ListGroup.Item>
+      <ListGroup.Item
+        as="li"
+        className="d-flex justify-content-between align-items-start"
+      >
+        <div className="ms-2 me-auto">
+          <div className="fw-bold">Sports week</div>
+          Annual Sports Competition
+        </div>
+        <Badge bg="primary" pill>
+        12/01/2024
+        </Badge>
+      </ListGroup.Item>
     </ListGroup>
         </Col>
       </Row>
