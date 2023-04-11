@@ -5,7 +5,7 @@ import Achivements3 from "../images/Achivements3.jpg";
 import boy2 from "../images/boy2.png";
 const Achivements = () => {
   return (
-    <Container id="achievements" className="mt-5 mb-5 p-5">
+    <Container id="achievements" className="mt-5 mb-5 px-5">
       <h1 className="pb-4">Achievements</h1>
       <Row xs={2} lg={4}>
         <Col>
