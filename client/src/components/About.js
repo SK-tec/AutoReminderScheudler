@@ -86,23 +86,23 @@ const About = () => {
       <Container id="con-about">
             <Row className="row-about w-100">
               <Col className="col-img col-img-1" xs={1} md={4}></Col>
-              <Col className="col-img col-img-2 d-flex align-items-center justify-content-center" xs={1} md={4}>Contempaorary Amenities</Col>
+              <Col className="col-img col-img-2 d-flex align-items-center justify-content-center fw-bold" xs={1} md={4}><span>100%</span> Satisfied parents</Col>
               <Col className="col-img col-img-3" xs={1} md={4}></Col>
             </Row>
             <Row className="row-about w-100">
-              <Col className="col-img col-img-4 d-flex align-items-center justify-content-center" xs={1} md={4}><span>100%</span> Satisfied parents</Col>
+              <Col className="col-img col-img-4 d-flex align-items-center justify-content-center fw-bold" xs={1} md={4}>Contempaorary Amenities</Col>
               <Col className="col-img col-img-5" xs={1} md={4}></Col>
-              <Col className="col-img col-img-6 d-flex align-items-center justify-content-center" xs={1} md={4}>Liberal arts <br></br>& sports tradition</Col>
+              <Col className="col-img col-img-6 d-flex align-items-center justify-content-center fw-bold" xs={1} md={4}>Liberal arts <br></br>& sports tradition</Col>
             </Row>
             <Row className="row-about w-100">
               <Col className="col-img col-img-7" xs={1} md={4}></Col>
-              <Col className="col-img col-img-8 d-flex align-items-center justify-content-center" xs={1} md={4}>Contempaorary Amenities</Col>
+              <Col className="col-img col-img-8 d-flex align-items-center justify-content-center fw-bold" xs={1} md={4}>Quest For Excellence</Col>
               <Col className="col-img col-img-9" xs={1} md={4}></Col>
             </Row>
             <Row className="row-about w-100">
-              <Col className="col-img col-img-10 d-flex align-items-center justify-content-center" xs={1} md={4}>Contempaorary Amenities</Col>
+              <Col className="col-img col-img-10 d-flex align-items-center justify-content-center fw-bold" xs={1} md={4}>Hooked On Learning</Col>
               <Col className="col-img col-img-11" xs={1} md={4}></Col>
-              <Col className="col-img col-img-12 d-flex align-items-center justify-content-center" xs={1} md={4}>Contempaorary Amenities</Col>
+              <Col className="col-img col-img-12 d-flex align-items-center justify-content-center fw-bold" xs={1} md={4}>Door-to-door school bus service</Col>
             </Row>
       </Container>
 
