@@ -120,16 +120,14 @@ h5 {
   margin-top: 10px;
 }
 .team {
-  background-color: rgb(241, 237, 231);
+  background-color: rgb(245, 230, 208);
   margin: 20px;
 }
 
 /************* About end ***********************/
 
 /************* Notice start ***********************/
-.noticeHeading {
-  background-color: rgb(241, 237, 231);
-}
+
 #notice {
   display: flex;
   background-color: rgb(241, 237, 231);
