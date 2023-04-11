@@ -58,8 +58,8 @@ const StudentDetails = () => {
 
   return (
     <>
-      <Table striped bordered hover responsive>
-        <thead>
+      <Table striped bordered hover responsive id="studenttable">
+        <thead className="heading">
           <tr>
             {column.map((student, index) => (
               <th>{student.heading}</th>
