@@ -27,19 +27,19 @@ function Notices() {
         </p>
       </div>
 
-      <Container fluid id="notice" className=" d-flex ">
-        <Row fluid className="mx-0 px-0 w-100 ">
+      <Container  id="notice" className=" d-flex ">
+        <Row  className="mx-0 px-0 ">
           <Col sm={5} id="Enquiry" className=" p-0 m-0">
             <img
               id="noticeImg"
-              className="w-100 "
+              className="w-100 h-100"
               as={Row}
               src={unsplash}
               alt="notice"
             />
           </Col>
           <Col sm={7} className=" p-0 m-0 ">
-            <ListGroup as="ol" className="w-100 " numbered>
+            <ListGroup as="ol" className="w-100 h-100 " >
               <lable>
                 <Card.Title className="bg-warning text-center py-4 px-0">
                   <i class="bi bi-stars"></i> Upcoming Events{" "}
@@ -49,7 +49,7 @@ function Notices() {
 
               <ListGroup.Item
                 as="li"
-                className="d-flex justify-content-between align-items-start"
+                className="d-flex justify-content-between align-items-start text-start"
               >
                 <div className="ms-2 me-auto">
                   <div className="fw-bold">School reopens</div>
@@ -61,19 +61,19 @@ function Notices() {
               </ListGroup.Item>
               <ListGroup.Item
                 as="li"
-                className="d-flex justify-content-between align-items-start"
+                className="d-flex justify-content-between align-items-start text-start"
               >
                 <div className="ms-2 me-auto">
-                  <div className="fw-bold">School reopens</div>
-                  we welcome all students in new classes!
+                  <div className="fw-bold">Parents' meet</div>
+                  Open day!
                 </div>
                 <Badge bg="primary" pill>
-                  14/06/2023
+                  15/06/2023
                 </Badge>
               </ListGroup.Item>
               <ListGroup.Item
                 as="li"
-                className="d-flex justify-content-between align-items-start"
+                className="d-flex justify-content-between align-items-start text-start"
               >
                 <div className="ms-2 me-auto">
                   <div className="fw-bold">1st Semester Exam</div>
@@ -85,7 +85,7 @@ function Notices() {
               </ListGroup.Item>
               <ListGroup.Item
                 as="li"
-                className="d-flex justify-content-between align-items-start"
+                className="d-flex justify-content-between align-items-start text-start"
               >
                 <div className="ms-2 me-auto">
                   <div className="fw-bold">Annual function</div>
@@ -97,7 +97,7 @@ function Notices() {
               </ListGroup.Item>
               <ListGroup.Item
                 as="li"
-                className="d-flex justify-content-between align-items-start"
+                className="d-flex justify-content-between align-items-start text-start"
               >
                 <div className="ms-2 me-auto">
                   <div className="fw-bold">Sports week</div>
@@ -107,30 +107,8 @@ function Notices() {
                   12/01/2024
                 </Badge>
               </ListGroup.Item>
-              <ListGroup.Item
-                as="li"
-                className="d-flex justify-content-between align-items-start"
-              >
-                <div className="ms-2 me-auto">
-                  <div className="fw-bold">Sports week</div>
-                  Annual Sports Competition
-                </div>
-                <Badge bg="primary" pill>
-                  12/01/2024
-                </Badge>
-              </ListGroup.Item>
-              <ListGroup.Item
-                as="li"
-                className="d-flex justify-content-between align-items-start"
-              >
-                <div className="ms-2 me-auto">
-                  <div className="fw-bold">Sports week</div>
-                  Annual Sports Competition
-                </div>
-                <Badge bg="primary" pill>
-                  12/01/2024
-                </Badge>
-              </ListGroup.Item>
+              
+              
             </ListGroup>
           </Col>
         </Row>
