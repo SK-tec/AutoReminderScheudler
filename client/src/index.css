@@ -127,7 +127,7 @@ h5 {
 /************* About end ***********************/
 
 /************* Notice start ***********************/
-.noticeHeading{
+.noticeHeading {
   background-color: rgb(241, 237, 231);
 }
 #notice {
@@ -156,15 +156,14 @@ h5 {
   display: flex;
 } */
 /* Enquiry Form Starts*/
-.eqbg{
+/* .eqbg{
   background-color: rgb(242, 241, 239);
-}
+} */
 .enquiry-form button {
   background-color: #428b87;
 }
 .enquiry-form {
   color: #347470;
-  
 }
 .enquiry-form .card-title {
   color: yellow;
@@ -330,3 +329,7 @@ li {
   border: none;
 }
 /*Sign In ends*/
+
+#studenttable .heading {
+  color: darkblue;
+}

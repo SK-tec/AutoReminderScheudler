@@ -54,16 +54,14 @@ const Admin = () => {
             </ul>
           </Col>
           <Col xs={11} id="tabs">
-            <Tabs defaultActiveKey="second" className="mb-3">
+            <Tabs defaultActiveKey="second" className="mb-3 ">
               <Tab eventKey="first" title="Register">
                 <RegisterForm />
               </Tab>
               <Tab eventKey="second" title="Fee">
                 <StudentDetails />
               </Tab>
-              {/* <Tab eventKey="third" title="Attendance">
-                Hii, I am Attendance tab and it's Underconstruction
-              </Tab> */}
+
               <Tab eventKey="fourth" title="Others">
                 Hi, Attendance and other Features are Under Developement
               </Tab>

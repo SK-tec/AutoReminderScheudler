@@ -66,7 +66,7 @@ const RegisterForm = () => {
   };
   return (
     <>
-      <Container className="register-form   mt-5 d-flex justify-content-center">
+      <Container className="register-form   mt-5 mb-5 d-flex justify-content-center">
         <Card border="secondary w-100">
           <Card.Header>
             {" "}
