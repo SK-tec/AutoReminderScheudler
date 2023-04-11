@@ -1,11 +1,11 @@
 import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import ame from "../images/ame.jpg";
+
 import schoolbus from "../images/schoolbus.jpg";
 import playground from "../images/playground.jpg";
 import computer from "../images/computer.jpg";
-import samatha from "../images/Samatha.png";
+import samatha from "../images/Samatha_1.PNG";
 import tejasvi from "../images/Tejasvi.png";
 import ershia from "../images/Ershia.jpg";
 
@@ -52,39 +52,6 @@ const About = () => {
           families, their peers and through their deep bonds of friendship.
         </p>
       </div>
-      {/*
-      <Container className="mt-3 mb-4 text-justify grid px-10 ">
-        <Row>
-          <Col sm={4}>
-            <img src={ame} alt="ame"/>
-          </Col>
-          <Col sm={4}>
-            <div>
-              <h5 style={{ color: "navy" }} className=" text-center ">
-                Contempaorary Amenities
-              </h5>
-            </div>
-          </Col>
-          <Col sm={4}>
-            <img src={schoolbus} alt="libary" />
-          </Col>
-        </Row>
-        <Row>
-          <Col sm={4}>
-            <h5 style={{ color: "navy" }} className=" text-center ">
-              100% satisfied parents
-            </h5>
-          </Col>
-          <Col sm={4}>
-            <img src={playground} alt="playground"/>
-          </Col>
-          <Col sm={4}>
-            <h5 style={{ color: "navy" }} className=" text-center ">
-              LIBERAL ARTS AND SPORTS TRADITION
-            </h5>
-          </Col>
-        </Row>
-  </Container>*/}
 
       <Container id="con-about">
         <Row className="row-about w-100">
