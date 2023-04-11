@@ -58,9 +58,14 @@ const feeInfo = async () => {
       "email",
     ]);
     const currentDate = moment(new Date()).format("MM/DD/YYYY");
+    let reminderDate = "";
     const recipientList = [];
     dueFeeInfo.map((record) => {
-      moment(record.dueDate).format("MM/DD/YYYY") == currentDate
+      reminderDate = moment(record.dueDate)
+        .subtract(14, "days")
+        .format("MM/DD/YYYY");
+
+      reminderDate == currentDate
         ? recipientList.push(record.email)
         : console.log("Date Not matched");
     });
@@ -70,12 +75,10 @@ const feeInfo = async () => {
     console.log(error);
   }
 };
-const mailScheduler = (recipientList, dueDate) => {
-  console.log("mailScheduler Invoked");
-  //console.log("dueDate);
-  //const dueFee = record.dueFee;
-  //const dueDate = moment(record.dueDate).format("MM/DD/YYYY");
-  //const recipient = record.email;
+const mailScheduler = (recipientList, currentDate) => {
+  const dueDate = moment(new Date(currentDate))
+    .add(14, "days")
+    .format("MM/DD/YYYY");
   const remainderMail = {
     from: process.env.EMAIL_TEST,
     to: recipientList,
@@ -89,25 +92,31 @@ const mailScheduler = (recipientList, dueDate) => {
       },
     ],
   };
-  let task = cron.schedule(`* * * * * *`, () => {
+  cron.schedule(`0 0 9 * * *`, () => {
     console.log("schedule Invoked");
     contactEmail.sendMail(remainderMail, function (err, info) {
-      if (err) console.log(err);
+      if (err) console.log("No recipient Found Today ");
       else console.log("Email sent successfully");
     });
   });
-  task.stop();
+  // let task = cron.schedule(`0 0 9 * * *`, () => {
+  //   console.log("schedule Invoked");
+  //   contactEmail.sendMail(remainderMail, function (err, info) {
+  //     if (err) console.log("No recipient Found Today ");
+  //     else console.log("Email sent successfully");
+  //   });
+  // });
+  //task.stop();
 };
 
 feeInfo();
 
 function getHTMLTemplateString(dueDate) {
-  console.log(dueDate);
   // add your css and html inside the string below
   return `
   <div style="background-color:bisque;color:darkblue;">
     <h3>Dear Parents, It's a kind reminder for  your due Fee</h3>
-    <p>Your 1st installment ₹6000 rupuees is due by ${dueDate}.Please pay the Fee on or before Duedate!</p>
+    <p>Your 1st installment ₹6000 rupuees is due by ${dueDate}.Please pay the Fee on or before due date!</p>
     <h4>Thank you :)</h4>
     <img  style="width:250px;" src="cid:unique@logo"/></div>
     `;
