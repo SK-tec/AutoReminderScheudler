@@ -129,7 +129,7 @@ h5 {
 /************* Notice start ***********************/
 
 #notice {
-  display: flex;  
+  display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0;
@@ -308,9 +308,12 @@ li {
   padding-left: 35px;
   padding-right: 35px;
 }
-#signin h4 {
+.signIn {
   color: darkblue;
 }
+/* #signin h4 {
+  color: darkblue;
+} */
 #signin button {
   background: darkblue;
 }
