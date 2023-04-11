@@ -10,7 +10,8 @@ import unsplash from "../images/unsplash.jpg";
 function Notices() {
   return (
     <>
-    <h2 style={{  fontFamily: "Rampart One", color: "navy" }} className="mt-5 mb-4 text-center shadow-5-strong">
+    <div className="noticeHeading p-4">
+    <h2 style={{  fontFamily: "Rampart One", color: "navy" }} className="mb-4  text-center shadow-5-strong">
         Welcome To Kidzee
       </h2>
       <h4 style={{  color: "green" }}>Your Door To The Future</h4>
@@ -20,7 +21,8 @@ function Notices() {
         academically, socially, and emotionally. We teach, model, and encourage a love of 
         learning, collaboration, and compassion for others.</p>
         </div>
-    <Container fluid id="notice" className=" d-flex mt-4 ">
+        </div>
+    <Container fluid id="notice" className=" d-flex ">
     
       <Row fluid className="mx-0 px-0 w-100 ">
         <Col sm={5} id="Enquiry" className=" p-0 m-0">
