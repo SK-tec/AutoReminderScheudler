@@ -40,89 +40,84 @@ const Contact = () => {
 
   return (
     <>
-    
-      <Container className=" w-75  mt-5 mb-5 enquiry-form">
-        <Card className="text-center ">
-          <Card.Header>
-            <Card.Title>Enquiry Form</Card.Title>
-          </Card.Header>
-          <Card.Body className="eqbg">
-            <Form
-              ref={formRef}
-              onSubmit={handleSubmit}
-              className="w-100 text-center mx-auto"
+      <Container id="Enquiry" className="w-50 text-center">
+        <Card.Title className="text-center p-3">
+          Enquiry Form
+        </Card.Title>
+
+        <Card.Text className="enquiry-form">
+          <Form onSubmit={handleSubmit}>
+            <Form.Group as={Row} className="mb-4 pt-3">
+              <Form.Label column sm={2}>
+                Name
+              </Form.Label>
+              <Col sm={9}>
+                <Form.Control
+                  type="text"
+                  placeholder="First Name LastName"
+                  name="fullName"
+                  onChange={handleChange}
+                />
+              </Col>
+            </Form.Group>
+
+            <Form.Group
+              as={Row}
+              className="mb-4 "
+              controlId="formHorizontalMother"
             >
-              <Form.Group
-                as={Row}
-                className="mb-4 pt-3 justify-content-center "
-              >
-                <Col sm={3}>
-                  <Form.Label>Name</Form.Label>
-                </Col>
-                <Col sm={7}>
-                  <Form.Control
-                    type="text"
-                    placeholder="First Name LastName"
-                    name="fullName"
-                    onChange={handleChange}
-                  />
-                </Col>
-              </Form.Group>
-              <Form.Group
-                as={Row}
-                className="mb-4 pt-3 justify-content-center "
-              >
-                <Col sm={3}>
-                  <Form.Label>Email</Form.Label>
-                </Col>
-                <Col sm={7}>
-                  <Form.Control
-                    type="Email"
-                    placeholder="Email"
-                    name="email"
-                    onChange={handleChange}
-                  />
-                </Col>
-              </Form.Group>
-              <Form.Group
-                as={Row}
-                className="mb-4 pt-3 justify-content-center "
-              >
-                <Col sm={3}>
-                  <Form.Label>Phone</Form.Label>
-                </Col>
-                <Col sm={7}>
-                  <Form.Control
-                    type="text"
-                    placeholder="Phone Number"
-                    name="phone"
-                    onChange={handleChange}
-                  />
-                </Col>
-              </Form.Group>
-              <Form.Group
-                as={Row}
-                className="mb-4 pt-3 justify-content-center "
-              >
-                <Col sm={3}>
-                  <Form.Label>Message</Form.Label>
-                </Col>
-                <Col sm={7}>
-                  <Form.Control
-                    as="textarea"
-                    rows={3}
-                    placeholder="Ask your question..."
-                    name="query"
-                    onChange={handleChange}
-                  />
-                </Col>
-              </Form.Group>
-              <Button type="submit" className="mt-2 mb-4">
-                Submit
-              </Button>
-            </Form>
-          </Card.Body>
-        </Card>
+              <Form.Label column sm={2}>
+                Email
+              </Form.Label>
+              <Col sm={9}>
+                <Form.Control
+                  type="Email"
+                  placeholder="Email"
+                  name="email"
+                  onChange={handleChange}
+                />
+              </Col>
+            </Form.Group>
+            <Form.Group
+              as={Row}
+              className="mb-4"
+              controlId="formHorizontalMother"
+            >
+              <Form.Label column sm={2}>
+                Phone
+              </Form.Label>
+              <Col sm={9}>
+                <Form.Control
+                  type="text"
+                  placeholder="Phone Number"
+                  name="phone"
+                  onChange={handleChange}
+                />
+              </Col>
+            </Form.Group>
+            <Form.Group
+              as={Row}
+              className="mb-4"
+              controlId="formHorizontalMother"
+            >
+              <Form.Label column sm={2}>
+                Query
+              </Form.Label>
+              <Col sm={9}>
+                <Form.Control
+                  as="textarea"
+                  rows={3}
+                  placeholder="Ask your question..."
+                  name="query"
+                  onChange={handleChange}
+                />
+              </Col>
+            </Form.Group>
+            <Button type="submit" className="mt-2 mb-4">
+              Submit
+            </Button>
+          </Form>
+        </Card.Text>
       </Container>
 
       <Modal show={status} onHide={closeMessage} animation={false}>

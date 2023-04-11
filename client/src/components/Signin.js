@@ -30,8 +30,8 @@ const Signin = ({ setIsLoggedin }) => {
   };
 
   return (
-    <Container className="py-5 mb-5 ">
-      <h2 style={{ color: "navy" }}>Welcome To Admin DashBoard</h2>
+    <Container className="py-5 mb-5">
+      <h2 className="text-center">Welcome To Admin DashBoard</h2>
       <Card border="secondary" className="mt-5" id="signin">
         <Form className="py-5" id="singin-form" onSubmit={handleSubmit}>
           <Form.Group className="formgroup mb-4">
