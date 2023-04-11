@@ -90,25 +90,25 @@ const About = () => {
         <Row className="row-about w-100">
           <Col className="col-img col-img-1" xs={1} md={4}></Col>
           <Col
-            className="col-img col-img-2 d-flex align-items-center justify-content-center"
-            xs={1}
-            md={4}
-          >
-            Contempaorary Amenities
-          </Col>
-          <Col className="col-img col-img-3" xs={1} md={4}></Col>
-        </Row>
-        <Row className="row-about w-100">
-          <Col
-            className="col-img col-img-4 d-flex align-items-center justify-content-center"
+            className="col-img col-img-2 d-flex align-items-center justify-content-center fw-bold"
             xs={1}
             md={4}
           >
             <span>100%</span> Satisfied parents
           </Col>
+          <Col className="col-img col-img-3" xs={1} md={4}></Col>
+        </Row>
+        <Row className="row-about w-100">
+          <Col
+            className="col-img col-img-4 d-flex align-items-center justify-content-center fw-bold"
+            xs={1}
+            md={4}
+          >
+            Contempaorary Amenities
+          </Col>
           <Col className="col-img col-img-5" xs={1} md={4}></Col>
           <Col
-            className="col-img col-img-6 d-flex align-items-center justify-content-center"
+            className="col-img col-img-6 d-flex align-items-center justify-content-center fw-bold"
             xs={1}
             md={4}
           >
@@ -118,29 +118,29 @@ const About = () => {
         <Row className="row-about w-100">
           <Col className="col-img col-img-7" xs={1} md={4}></Col>
           <Col
-            className="col-img col-img-8 d-flex align-items-center justify-content-center"
+            className="col-img col-img-8 d-flex align-items-center justify-content-center fw-bold"
             xs={1}
             md={4}
           >
-            Contempaorary Amenities
+            Hooked on learning
           </Col>
           <Col className="col-img col-img-9" xs={1} md={4}></Col>
         </Row>
         <Row className="row-about w-100">
           <Col
-            className="col-img col-img-10 d-flex align-items-center justify-content-center"
+            className="col-img col-img-10 d-flex align-items-center justify-content-center fw-bold"
             xs={1}
             md={4}
           >
-            Contempaorary Amenities
+            The quest for excellence
           </Col>
           <Col className="col-img col-img-11" xs={1} md={4}></Col>
           <Col
-            className="col-img col-img-12 d-flex align-items-center justify-content-center"
+            className="col-img col-img-12 d-flex align-items-center justify-content-center fw-bold"
             xs={1}
             md={4}
           >
-            Contempaorary Amenities
+            Door to door bus service
           </Col>
         </Row>
       </Container>
@@ -152,7 +152,7 @@ const About = () => {
             {/* <svg className="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> */}
             <img
               src={samatha}
-              className="bd-placeholder-img rounded-circle mt-3 "
+              className="bd-placeholder-img rounded-circle mt-3"
               width="180"
               height="160"
               alt=""
@@ -165,7 +165,7 @@ const About = () => {
           <div className="col-lg-3">
             <img
               src={ershia}
-              className="bd-placeholder-img rounded-circle mt-3 "
+              className="bd-placeholder-img rounded-circle mt-3"
               width="180"
               height="160"
               alt=""
