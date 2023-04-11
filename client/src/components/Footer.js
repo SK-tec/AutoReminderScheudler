@@ -34,7 +34,7 @@ const Footer = () => {
           </Col>
           <Col className="justify-content-center">
             <Row className="mt-4 mx-auto">
-              <img src={logo} className="rounded mx-auto d-block" alt=""/>
+              <img src={logo} className="rounded mx-auto d-block "alt="" />
             </Row>
             <Row className="social-icons" xs={4} >
               <Col className="facebook">

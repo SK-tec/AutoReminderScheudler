@@ -1,12 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,200;1,400;1,500;1,600&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&family=Oswald:wght@200;300;400;500;600;700&family=Playfair+Display:wght@900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300&display=swap");
+/***** Heading font - font-family: 'Rampart One', cursive; ****/
+@import url("https://fonts.googleapis.com/css2?family=Anuphan:wght@100;200;300;400;500;600;700&family=Courgette&family=Dosis:wght@200;300;400;500;600;700;800&family=Handlee&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&family=Playfair+Display:wght@900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Rampart+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300&display=swap");
+
+/***** Paragraph font - font-family: 'Anuphan', sans-serif; ****/
+@import url("https://fonts.googleapis.com/css2?family=Anuphan:wght@100;200;300;400;500;600;700&family=Courgette&family=Dosis:wght@200;300;400;500;600;700;800&family=Handlee&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&family=Playfair+Display:wght@900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Rampart+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300&display=swap");
 
 /************* Navbar start ***********************/
-.Navbar{
-  font-family: 'Poppins', sans-serif;
+.Navbar {
+  font-family: "Poppins", sans-serif;
   background-color: #428b87;
   color: yellow;
 }
-
 .navbar-brand {
   display: flex;
   flex-direction: row;
@@ -14,13 +17,13 @@
   gap: 10px;
   margin-left: 3rem;
 }
-#responsive-navbar-nav .navLink{
- margin-left: 3rem;
- margin-right: 5rem;
- color: yellow;
+#responsive-navbar-nav .navLink {
+  margin-left: 3rem;
+  margin-right: 5rem;
+  color: yellow;
 }
-#carousel{
-  height:auto;
+#carousel img {
+  height: 80vh;
 }
 
 /************* Navbar end ***********************/
@@ -180,17 +183,16 @@ h5 {
 /************* notice end ***********************/
 
 /************* achivements starts ***********************/
-#achievements{
+#achievements {
   background-color: #428b87;
-  color:darkblue;
+  color: darkblue;
 }
-#achievements h1{
+#achievements h1 {
   color: #ffffff;
 }
-#achievements img{
+#achievements img {
   max-width: 100%;
   height: 16vw;
- 
 }
 #achievements .card img {
   border: 2px solid #ffffff;
@@ -198,11 +200,8 @@ h5 {
 }
 
 #achievements .card:hover {
+  border-color: rgb(13, 110, 253);
   transform: scale(1.03);
-}
-
-#achievements .card-full{
-  box-shadow: 4px 4px 8px rgba(106, 104, 104, 0.13);
 }
 /************* achivements end ***********************/
 .sideNav {
@@ -217,14 +216,14 @@ h5 {
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items:center;
-  font-family: 'Poppins', sans-serif;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
   background-color: #428b87;
   padding-right: 2em;
   padding-left: 0;
   padding-top: 0;
   padding-bottom: 0;
-  color: #071322;
+  color: yellow;
 }
 
 #sidebar span {
@@ -235,34 +234,26 @@ li {
   list-style: none;
 }
 
-#tabs{
-  font-family: 'Poppins', sans-serif;
-}
-
-#Enquiry{
-  display: flex;
-  flex-direction: column;
-  margin-top: 3.5rem;
-  margin-bottom: 3.5rem;
+#tabs {
+  font-family: "Poppins", sans-serif;
 }
 
 /************* footer start ***********************/
 
 .footer {
-  background-color:#428b87;
+  background-color: #428b87;
   color: white;
 }
-
-.footer-col h4{
-  color:yellow;
+.footer-col h4 {
+  color: yellow;
 }
 .footer-col {
   text-align: left;
-  font-family: 'Anuphan', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-.footer p{
-  font-size: 0.9rem;
-  cursor: pointer;
+
+.row-footer h4 {
+  font-size: 1.1rem;
 }
 
 .container-footer-left {
@@ -273,21 +264,20 @@ li {
 }
 
 .social-icons {
-  font-size: 1.5rem;
+  font-size: 2rem;
   cursor: pointer;
-  padding: 0 0.1rem;
 }
 .facebook {
-  color: #071322;;
+  color: blue;
 }
 .insta {
-  color: #071322;;
+  color: crimson;
 }
 .twitter {
-  color: #071322;
+  color: rgb(5, 38, 100);
 }
 .linkedin {
-  color: #071322;
+  color: blue;
 }
 /************* footer end ***********************/
 /*Regisration Form start */
@@ -314,30 +304,25 @@ li {
 /*Regisration Form end */
 /*Sign In starts*/
 #signin {
-  font-family: 'Anuphan', sans-serif;
-  background-color: #fdf3eec9;
-  box-shadow: 4px 4px 8px rgba(106, 104, 104, 0.13);
-  border: none;
+  background-color: rgb(247, 242, 237);
   margin: 0 auto;
   max-width: 500px;
-  
+
   padding-left: 35px;
   padding-right: 35px;
 }
-#signin h4{color:darkblue}
+#signin h4 {
+  color: darkblue;
+}
 #signin button {
-  background: #DD5031;
-  padding: 0.3rem 1.2rem;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
+  background: darkblue;
 }
 #singin-form {
   padding-left: 30px;
   padding-right: 30px;
 }
 #logout {
-  color: #DD5031;
+  color: yellow;
   background: none;
   border: none;
 }
