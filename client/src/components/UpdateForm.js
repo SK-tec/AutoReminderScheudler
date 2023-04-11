@@ -28,7 +28,6 @@ export const UpdateForm = ({ id, setIsUpdated }) => {
       .get(`/api/students/${id}`)
       .then((res) => {
         setForm(res.data);
-        console.log(res.data);
       })
       .catch((e) => console.log(e));
   };
@@ -50,8 +49,6 @@ export const UpdateForm = ({ id, setIsUpdated }) => {
         .then((res) => {
           setMessage("Data Updated successfully");
           setIsUpdated(true);
-
-          console.log(res);
 
           handleReset();
           handleClose();

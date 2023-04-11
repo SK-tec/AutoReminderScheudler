@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "../axiosInstance";
-import StudentInfo from "./StudentInfo";
 import Table from "react-bootstrap/Table";
 
 import UpdateForm from "./UpdateForm";
