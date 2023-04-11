@@ -11,7 +11,7 @@ const Footer = () => {
         <Row xs={2} md={4} >
           <Col className="footer-col mt-4">
             <h4>Main Menu</h4>
-            <p>About US</p>
+            
             <p>Admissions</p>
             <p>School Uniform</p>
             <p>Carrer</p>
@@ -29,8 +29,9 @@ const Footer = () => {
           <Col className="footer-col mt-4">
             <h4>Contact Us</h4>
             <p>+91 6225 0098 12</p>
-            <p>kidzee@kidzee.com</p>
-            <p>Mahatma Gandhi Road, Mumbai 40721, India</p>
+            <p>info@kidzee.com</p>
+            <p>Mahatma Gandhi Road</p> 
+            <p>Mumbai 40721, India</p>
           </Col>
           <Col className="justify-content-center">
             <Row className="mt-4 mx-auto">

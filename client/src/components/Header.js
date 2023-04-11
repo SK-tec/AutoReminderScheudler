@@ -14,28 +14,28 @@ const Header = () => {
         <Carousel.Item>
           <img className="d-block w-100 " src={school} alt="First slide" />
           <Carousel.Caption>
-            <h3 className="shadow-5" >A Tradition of Excellence</h3>
+            <h2 className="shadow-5" >A Tradition of Excellence</h2>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img className="d-block w-100" src={students} alt="Second slide" />
 
           <Carousel.Caption>
-            <h3 className="shadow-5" >The future begins here</h3>
+            <h2 className="shadow-5" >The future begins here</h2>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img className="d-block w-100" src={sport} alt="Third slide" />
 
           <Carousel.Caption>
-            <h3 className="shadow-5">One Team, One Mission.</h3>
+            <h2 className="shadow-5">One Team, One Mission.</h2>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img className="d-block w-100" src={sport2} alt="Third slide" />
 
           <Carousel.Caption>
-            <h3 className="shadow-5">Taking your game to the next level</h3>
+            <h2 className="shadow-5">Taking your game to the next level</h2>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
